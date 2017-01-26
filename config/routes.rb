@@ -1,13 +1,17 @@
 Rails.application.routes.draw do
-    resources :users
-    resources :posts do
-      resources :comments
-    end
-    root :to => "posts#index"
 
-    get "/log-in" => "sessions#new"
-    post "/log-in" => "sessions#create"
-    get "/log-out" => "sessions#destroy", as: :log_out
+  # Default to post's
+  root :to => "posts#index"
 
-#    resources :comments
+  # resources
+  resources :users
+  resources :posts do
+    resources :comments
+  end
+
+  # Session maagement
+  get "/log-in" => "sessions#new"
+  post "/log-in" => "sessions#create"
+  get "/log-out" => "sessions#destroy", as: :log_out
+
 end

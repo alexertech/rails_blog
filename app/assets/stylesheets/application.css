@@ -17,7 +17,7 @@
 body {
     margin            : 5px;
     padding           : 5px;
-    font-family       : Arial, sans-serif;
+    font-family       : sans-serif;
     font-size         : 0.9em;
     color             : #000;
     text-align        : justify;
@@ -33,36 +33,27 @@ a{
 }
 
 input, textarea, select {
-    font-family        : monospace;
-    font-size          : 12px;
-    font-weight        : bold;
-    border             : 1px solid #0b467f;
-    color              : white;
+    border             : none;
+    border-left        : 1px solid #0b467f;
+    border-bottom      : 1px solid #0b467f;
     padding            : 5px;
-    background-color   : black;
-}
-input:focus, textarea:focus, select:focus {
-    border             : 1px solid #c75726;
-}
-input {
-}
-textarea {
 }
 
+input {
+}
+
+textarea {
+}
 
 p#logo{
     text-align:center;
 }
 
-
 p#title {
-
     font-size:2em;
-
 }
 
 div#main {
-
     width : 450px;
     margin-left:auto;
     margin-right : auto;

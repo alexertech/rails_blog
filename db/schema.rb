@@ -10,15 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170126043129) do
+ActiveRecord::Schema.define(version: 20170126232457) do
 
-  create_table "commrnies", force: :cascade do |t|
+  create_table "comments", force: :cascade do |t|
     t.string   "author"
     t.text     "body"
     t.integer  "post_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["post_id"], name: "index_commrnies_on_post_id"
+    t.index ["post_id"], name: "index_comments_on_post_id"
   end
 
   create_table "posts", force: :cascade do |t|
