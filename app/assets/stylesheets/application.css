@@ -1,0 +1,77 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body {
+    margin            : 5px;
+    padding           : 5px;
+    font-family       : Arial, sans-serif;
+    font-size         : 0.9em;
+    color             : #000;
+    text-align        : justify;
+    background-color  : #ccc;
+}
+
+img {
+    border            : 0px;
+}
+
+a{
+    color: #2280a7;
+}
+
+input, textarea, select {
+    font-family        : monospace;
+    font-size          : 12px;
+    font-weight        : bold;
+    border             : 1px solid #0b467f;
+    color              : white;
+    padding            : 5px;
+    background-color   : black;
+}
+input:focus, textarea:focus, select:focus {
+    border             : 1px solid #c75726;
+}
+input {
+}
+textarea {
+}
+
+
+p#logo{
+    text-align:center;
+}
+
+
+p#title {
+
+    font-size:2em;
+
+}
+
+div#main {
+
+    width : 450px;
+    margin-left:auto;
+    margin-right : auto;
+    background-color:#fff;
+    padding : 30px;
+}
+
+div#slogan {
+    text-align:center;
+    font-style:small;
+    font-family:monospace;
+}

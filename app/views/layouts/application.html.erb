@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <div id="main">
+
+        <% if current_user %>
+          Signed in as <%= current_user.username %> | 
+          <%= link_to 'New Post', new_post_path %> | 
+          <%= link_to "Logout", '/log-out' %>
+        <% else %>
+          <%= link_to 'Login', '/log-in' %> 
+        <% end %>
+
+
+        <p id="logo">
+            <%= image_tag "x2.jpg", :size => "192x192" %>
+        </p>
+
+        <div id="slogan">
+        Another random blog, by a random coder. 
+        Infosec fun and Game dev (probably) by
+        <a href="http://twitter.com/alexertech">@alexertech</a>
+        </div>
+        
+        <br>
+
+        <hr>
+
+        <p id="content">
+            <%= yield %>
+        </p>
+
+    </p>
+
+  </body>
+</html>
