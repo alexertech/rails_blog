@@ -1,4 +1,5 @@
 <%= form_for(post) do |f| %>
+
   <% if post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -13,23 +14,15 @@
 
   <div class="field">
     <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, size: 78 %>
   </div>
 
   <div class="field">
     <%= f.label :body %>
-    <%= f.text_area :body, id: 'my-wymeditor', cols: 20, rows: 50 %>
+    <%= f.text_area :body, id: 'my-wymeditor' %>
   </div>
 
   <div class="actions">
     <%= f.submit 'Send', class: "wymupdate" %>
   </div>
 <% end %>
-
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('#my-wymeditor').wymeditor({
-                skin: 'compact'
-            });
-    });
-</script>
