@@ -94,3 +94,7 @@ div.post_comments,
 div.post_add_comment  {
   padding-top:20px;
 }
+
+div.login_form {
+  padding:30px;
+}

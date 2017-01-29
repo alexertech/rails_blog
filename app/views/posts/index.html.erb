@@ -13,7 +13,7 @@
     <%= post.body.html_safe %>
   </div>
   <div class="post_actions">
-    <%= link_to 'Comment', post %> (<%=post.comments.count%>)
+    <%= link_to 'Comments', post %> (<%=post.comments.count%>)
     <% if current_user %>
     | <%= link_to 'Edit', edit_post_path(post) %>
     | <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
