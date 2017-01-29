@@ -1,0 +1,96 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+  *= require font-awesome
+ */
+
+body {
+    margin            : 5px;
+    padding           : 5px;
+    font-family       : sans-serif;
+    color             : #000;
+    text-align        : justify;
+    background-color  : #ccc;
+}
+
+img {
+    border            : 0px;
+}
+
+a{
+    color: #2280a7;
+}
+
+input, textarea, select {
+    border             : none;
+    border-left        : 1px solid #0b467f;
+    border-bottom      : 1px solid #0b467f;
+    padding            : 5px;
+}
+
+input {
+}
+
+textarea {
+}
+
+p {
+  margin :0;
+  padding:10px 0 0 0;
+}
+
+div#main {
+    width : 600px;
+    margin-left:auto;
+    margin-right : auto;
+    background-color:#fff;
+}
+
+div#user_bar{
+  padding:5px;
+  text-align:right;
+  background-color  : #ccc;
+}
+
+div#slogan {
+    text-align:center;
+    font-size:small;
+    font-family:monospace;
+    border-bottom:1px solid #ccc;
+    padding:5px;
+}
+
+div#slogan strong{
+  font-size : 1.2em;
+}
+
+div.post{
+  padding:30px;
+}
+
+div.post_title {
+  padding-bottom:10px;
+  font-size:1.8em;
+}
+
+div.post_date {
+  font-style:italic;
+  font-size:small;
+}
+
+div.post_actions,
+div.post_comments,
+div.post_add_comment  {
+  padding-top:20px;
+}
