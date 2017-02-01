@@ -22,6 +22,11 @@
     <%= f.text_area :body, id: 'my-wymeditor' %>
   </div>
 
+  <div class="field">
+    <%= f.label :tag %>
+    <%= f.text_field :tag_list, value: f.object.tag_list.to_s %>
+  </div>
+
   <div class="actions">
     <%= f.submit 'Send', class: "wymupdate" %>
   </div>

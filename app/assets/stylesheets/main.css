@@ -106,3 +106,21 @@ div.post_add_comment  {
 div.login_form {
   padding:30px;
 }
+
+div.post_list {
+  padding:30px;
+}
+div.post_list div {
+  padding : 5px 0 5px 0;
+}
+div.tag_title{
+  padding:30px;
+  padding-bottom: 0;
+  font-size:1.8em;
+}
+div.tag_title div {
+  font-size:small;
+}
+div.post_tags{
+  padding-top:20px;
+}

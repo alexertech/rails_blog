@@ -4,7 +4,7 @@
 
 <div class="post">
   <div class="post_title">
-    <%= post.title%>
+    <%= link_to post.title, post_path(post) %>
     <div class="post_controls">
       <%= link_to 'Comments', post %> (<%=post.comments.count%>)
       <% if current_user %>
@@ -19,7 +19,9 @@
   <div class="post_body">
     <%= post.body.html_safe %>
   </div>
-
+  <div class="post_tags">
+    <%= render post.tags %>
+  </div>
 </div>
 
 <% end %>

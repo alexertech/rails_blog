@@ -20,6 +20,9 @@
     <%= @post.body.html_safe %>
   </div>
 
+  <div class="post_tags">
+    <strong>Tag(s)</strong> <%= render @post.tags %>
+  </div>
 
   <% if @post.comments.count > 0 %>
   <div class="post_comments">
