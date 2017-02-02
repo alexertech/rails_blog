@@ -12320,3 +12320,874 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 34ms (Views: 32.1ms | ActiveRecord: 0.9ms)
 
 
+Started GET "/" for ::1 at 2017-01-31 23:47:47 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:PostsController> at /Users/alex/Workspace/rails_blog/app/controllers/posts_controller.rb:3)
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 7], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [2 times] (0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 6], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [3 times] (0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [1 times] (0.1ms)
+  Rendered posts/index.html.erb within layouts/application (61.0ms)
+Completed 200 OK in 285ms (Views: 244.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2017-01-31 23:49:14 -0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 7], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [2 times] (0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 6], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [3 times] (0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [1 times] (0.1ms)
+  Rendered posts/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 33ms (Views: 30.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2017-01-31 23:49:36 -0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  Rendered posts/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2017-01-31 23:49:46 -0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 7], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [2 times] (0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 6], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [3 times] (0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [1 times] (0.1ms)
+  Rendered posts/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-31 23:50:46 -0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 7], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [2 times] (0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 6], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [3 times] (0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [1 times] (0.1ms)
+  Rendered posts/index.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 48ms (Views: 45.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2017-01-31 23:51:06 -0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  Rendered posts/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2017-01-31 23:51:16 -0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 7], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [2 times] (0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 6], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [3 times] (0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [1 times] (0.1ms)
+  Rendered posts/index.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 37ms (Views: 34.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2017-01-31 23:51:38 -0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 7], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [2 times] (0.7ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 6], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [3 times] (0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [1 times] (0.2ms)
+  Rendered posts/index.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 42ms (Views: 39.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-31 23:51:50 -0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 7], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [2 times] (0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 6], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [3 times] (0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [1 times] (0.1ms)
+  Rendered posts/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 35ms (Views: 33.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2017-01-31 23:51:56 -0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 7], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [2 times] (0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 6], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [3 times] (0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [1 times] (0.1ms)
+  Rendered posts/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 32ms (Views: 30.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/6" for ::1 at 2017-01-31 23:52:05 -0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 6], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [3 times] (0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  Rendered comments/_form.html.erb (18.7ms)
+  Rendered posts/show.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 44ms (Views: 41.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts" for ::1 at 2017-01-31 23:52:09 -0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 7], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [2 times] (0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 6], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [3 times] (0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [1 times] (0.1ms)
+  Rendered posts/index.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 42ms (Views: 38.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/2" for ::1 at 2017-01-31 23:52:11 -0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [1 times] (0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  Rendered collection of comments/_comment.html.erb [1 times] (0.8ms)
+  Rendered comments/_form.html.erb (1.7ms)
+  Rendered posts/show.html.erb within layouts/application (25.7ms)
+Completed 200 OK in 49ms (Views: 46.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts" for ::1 at 2017-01-31 23:52:21 -0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 7], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [2 times] (0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 6], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [3 times] (0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [1 times] (0.1ms)
+  Rendered posts/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 33ms (Views: 31.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2017-02-01 22:18:27 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:PostsController> at /Users/alex/Workspace/rails_blog/app/controllers/posts_controller.rb:3)
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 7], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [2 times] (0.9ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 6], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [3 times] (0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [1 times] (0.1ms)
+  Rendered posts/index.html.erb within layouts/application (70.8ms)
+Completed 200 OK in 338ms (Views: 295.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/posts/new" for ::1 at 2017-02-01 22:18:34 -0300
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (19.0ms)
+  Rendered posts/new.html.erb within layouts/application (20.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 39ms (Views: 37.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/posts" for ::1 at 2017-02-01 22:36:19 -0300
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+I+JVupz83g/Ib3zk5CG22RfXBzzGE5LgnLp8QluQT1xlgYjG0a0+pmV85v574BEQcdvEGI5Vs74snBNTxuLFA==", "post"=>{"title"=>"test markdown", "body"=>"\r\n#ASM Basics\r\n\r\n\r\nIf you decide to embark into the exploitation world, reading Assembler and understand the basics of how the memory and CPU works, will help you to not feel overwhelm with the intimidating debugging process.\r\n\r\nSo, grab your favorite Linux flavor and perform the installation of “nasm”, the Intel Assembler. Also keep in mind that the registers have different names according to the architecture.  For example, the Instruction Pointer is called IP on 16 bits, EIP on 32 bits and RIP on 64bits. Ill be using KALI 32bits, so my codes and samples will always refer to the 32 bits registers. \r\n\r\nA 32-bit Linux Flavor, runs in protected mode, has flat memory model, and uses the ELF format for binaries.\r\n\r\n### Our first code\r\n\r\nGrab your favorite editor (nano, vim, gedit) and lets write ASM code. \r\n\r\nA program can be divided into sections: .text for your code (read-only), .data for your data (read-write), .bss for uninitialized data (read-write); there can actually be a few other standard sections, as well as some user-defined sections, but there's rare need to use them and they are out of our interest here. Any program must have at least .text section.\r\n\r\nCreate a file called \"hello.asm\" with this content:\r\n\r\n~~~\r\nsection     .text\r\nglobal      _start                ;must be declared for linker (ld)\r\n\r\n_start:                           ;tell linker entry point\r\n\r\n    mov     edx,len               ;edx will hold the message length\r\n    mov     ecx,msg               ;ecx hold the message to write\r\n    mov     ebx,1                 ;file descriptor (stdout)\r\n    mov     eax,4                 ;system call number (sys_write)\r\n    int     0x80                  ;call kernel\r\n\r\n    mov     eax,1                 ;system call number (sys_exit)\r\n    int     0x80                  ;call kernel\r\n\r\nsection     .data                 ; where we store our vars\r\n\r\n    msg     db  'Hello, world!',0xa             ;the string\r\n~~~\r\n\r\nSave the file, and lets produce the ELF object file:\r\n\r\n~~~\r\n$ nasm -f elf hello.asm \r\n~~~\r\n\r\nUsing the linker we can produce the executable:\r\n\r\n~~~\r\n$ ld -s -o hello hello.o \r\n~~~\r\n\r\nAnd finally, run the program:\r\n\r\n~~~\r\n$ ./hello \r\nHello, world!\r\n~~~\r\n\r\n## Know your registers\r\n\r\n**EDX** : data, this is an extension of the EAX register. It allows for more complex calculations (multiply, divide) by allowing extra data to be stored to facilitate those calculations. In this sample, we will use it to store the location of the message length.\r\n\r\n**ECX** : counter, used for iterations. ECX counts downward, and again being used just to store the message location.\r\n\r\n**EBX** : base (does not have anything to do with base pointer). It has no general purpose and can be used to store data, and for us will be use the stdout (show the output directly on the terminal).\r\n\r\n**EAX** : accumulator, used for performing calculations, and used to store return values from function calls. Basic operations such as add, subtract, compare use this general-purpose register. We will use a lot the EAX register later, but here we will store the system call number.\r\n\r\n**DB**  : Declare a byte, referred to as location (msg), containing the value 'Hello, world!'.\r\n\r\n**EQU** : The EQU directive is used for defining constants and can be expressions. In this case store the length of the msg. \r\n\r\n\r\n## About System calls\r\n\r\nWe use a direct kernel call (int 0x80), since this is the fastest way to call kernel service. Also, our code is not linked to any library, does not use ELF interpreter, it communicates with kernel directly.\r\n\r\nUnless a program is just implementing some math algorithms in assembly, it will deal with such things as getting input, producing output, and exiting. For this, it will need to call on OS services. In fact, programming in assembly language is quite the same in different OSes, unless OS services are touched.\r\n", "tag_list"=>"markdown"}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "test markdown"], ["body", "\r\n#ASM Basics\r\n\r\n\r\nIf you decide to embark into the exploitation world, reading Assembler and understand the basics of how the memory and CPU works, will help you to not feel overwhelm with the intimidating debugging process.\r\n\r\nSo, grab your favorite Linux flavor and perform the installation of “nasm”, the Intel Assembler. Also keep in mind that the registers have different names according to the architecture.  For example, the Instruction Pointer is called IP on 16 bits, EIP on 32 bits and RIP on 64bits. Ill be using KALI 32bits, so my codes and samples will always refer to the 32 bits registers. \r\n\r\nA 32-bit Linux Flavor, runs in protected mode, has flat memory model, and uses the ELF format for binaries.\r\n\r\n### Our first code\r\n\r\nGrab your favorite editor (nano, vim, gedit) and lets write ASM code. \r\n\r\nA program can be divided into sections: .text for your code (read-only), .data for your data (read-write), .bss for uninitialized data (read-write); there can actually be a few other standard sections, as well as some user-defined sections, but there's rare need to use them and they are out of our interest here. Any program must have at least .text section.\r\n\r\nCreate a file called \"hello.asm\" with this content:\r\n\r\n~~~\r\nsection     .text\r\nglobal      _start                ;must be declared for linker (ld)\r\n\r\n_start:                           ;tell linker entry point\r\n\r\n    mov     edx,len               ;edx will hold the message length\r\n    mov     ecx,msg               ;ecx hold the message to write\r\n    mov     ebx,1                 ;file descriptor (stdout)\r\n    mov     eax,4                 ;system call number (sys_write)\r\n    int     0x80                  ;call kernel\r\n\r\n    mov     eax,1                 ;system call number (sys_exit)\r\n    int     0x80                  ;call kernel\r\n\r\nsection     .data                 ; where we store our vars\r\n\r\n    msg     db  'Hello, world!',0xa             ;the string\r\n~~~\r\n\r\nSave the file, and lets produce the ELF object file:\r\n\r\n~~~\r\n$ nasm -f elf hello.asm \r\n~~~\r\n\r\nUsing the linker we can produce the executable:\r\n\r\n~~~\r\n$ ld -s -o hello hello.o \r\n~~~\r\n\r\nAnd finally, run the program:\r\n\r\n~~~\r\n$ ./hello \r\nHello, world!\r\n~~~\r\n\r\n## Know your registers\r\n\r\n**EDX** : data, this is an extension of the EAX register. It allows for more complex calculations (multiply, divide) by allowing extra data to be stored to facilitate those calculations. In this sample, we will use it to store the location of the message length.\r\n\r\n**ECX** : counter, used for iterations. ECX counts downward, and again being used just to store the message location.\r\n\r\n**EBX** : base (does not have anything to do with base pointer). It has no general purpose and can be used to store data, and for us will be use the stdout (show the output directly on the terminal).\r\n\r\n**EAX** : accumulator, used for performing calculations, and used to store return values from function calls. Basic operations such as add, subtract, compare use this general-purpose register. We will use a lot the EAX register later, but here we will store the system call number.\r\n\r\n**DB**  : Declare a byte, referred to as location (msg), containing the value 'Hello, world!'.\r\n\r\n**EQU** : The EQU directive is used for defining constants and can be expressions. In this case store the length of the msg. \r\n\r\n\r\n## About System calls\r\n\r\nWe use a direct kernel call (int 0x80), since this is the fastest way to call kernel service. Also, our code is not linked to any library, does not use ELF interpreter, it communicates with kernel directly.\r\n\r\nUnless a program is just implementing some math algorithms in assembly, it will deal with such things as getting input, producing output, and exiting. For this, it will need to call on OS services. In fact, programming in assembly language is quite the same in different OSes, unless OS services are touched.\r\n"], ["created_at", 2017-02-02 01:36:19 UTC], ["updated_at", 2017-02-02 01:36:19 UTC]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE (LOWER(name) = LOWER('markdown'))[0m
+  [1m[36mActsAsTaggableOn::Tag Exists (2.2ms)[0m  [1m[34mSELECT  1 AS one FROM "tags" WHERE "tags"."name" = ? LIMIT ?[0m  [["name", "markdown"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "tags" ("name") VALUES (?)[0m  [["name", "markdown"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 8], ["taggable_type", "Post"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tagging Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "taggings" WHERE "taggings"."tag_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."taggable_id" = ? AND "taggings"."context" = ? AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL LIMIT ?[0m  [["tag_id", 8], ["taggable_type", "Post"], ["taggable_id", 8], ["context", "tags"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "taggings" ("tag_id", "taggable_type", "taggable_id", "context", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["tag_id", 8], ["taggable_type", "Post"], ["taggable_id", 8], ["context", "tags"], ["created_at", 2017-02-02 01:36:19 UTC]]
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) + 1 WHERE "tags"."id" = ?[0m  [["id", 8]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/8
+Completed 302 Found in 89ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/posts/8" for ::1 at 2017-02-01 22:36:19 -0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `body' for nil:NilClass):
+    17:   </div>
+    18: 
+    19:   <div class="post_body">
+    20:     <%= markdown(@blog.body) %>
+    21:   </div>
+    22: 
+    23:   <div class="post_tags">
+  
+app/views/posts/show.html.erb:20:in `_app_views_posts_show_html_erb___3795691039575284803_70316692136700'
+  Rendering /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.1ms)
+  Rendering /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (66.9ms)
+Started GET "/posts/8" for ::1 at 2017-02-01 22:36:50 -0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (16.1ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (Symbol or String expected, but NilClass given.):
+    17:   </div>
+    18: 
+    19:   <div class="post_body">
+    20:     <%= markdown(@post.body) %>
+    21:   </div>
+    22: 
+    23:   <div class="post_tags">
+  
+app/helpers/application_helper.rb:4:in `block_code'
+app/helpers/application_helper.rb:18:in `render'
+app/helpers/application_helper.rb:18:in `markdown'
+app/views/posts/show.html.erb:20:in `_app_views_posts_show_html_erb___3795691039575284803_70316725683080'
+  Rendering /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (62.8ms)
+Started GET "/posts/new" for ::1 at 2017-02-01 22:41:40 -0300
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:PostsController> at /Users/alex/Workspace/rails_blog/app/controllers/posts_controller.rb:3)
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (3.9ms)
+  Rendered posts/new.html.erb within layouts/application (5.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 45ms (Views: 33.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts" for ::1 at 2017-02-01 22:41:44 -0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 8]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 8], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [1 times] (0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 7], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [2 times] (0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 6], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [3 times] (0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [1 times] (0.1ms)
+  Rendered posts/index.html.erb within layouts/application (34.3ms)
+Completed 200 OK in 53ms (Views: 49.7ms | ActiveRecord: 1.7ms)
+
+
+Started DELETE "/posts/8" for ::1 at 2017-02-01 22:41:49 -0300
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"WdkdBRtQNvnSvap2XKAAj1eChXQGNqe4IUzt/hs0iyvY2Tm/vlxLQN5nmMnwEJeulUi3mcoMMy93fJ5QZzpo/w==", "id"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 8]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.1ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ?[0m  [["taggable_id", 8], ["taggable_type", "Post"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "taggings" WHERE "taggings"."id" = ?[0m  [["id", 9]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) - 1 WHERE "tags"."id" = ?[0m  [["id", 8]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.1ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 8], ["taggable_type", "Post"], ["context", "tags"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 8]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 13ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/posts" for ::1 at 2017-02-01 22:41:49 -0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 7], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [2 times] (0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 6], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [3 times] (0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [1 times] (0.1ms)
+  Rendered posts/index.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 43ms (Views: 40.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/new" for ::1 at 2017-02-01 22:41:51 -0300
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (3.3ms)
+  Rendered posts/new.html.erb within layouts/application (4.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/posts" for ::1 at 2017-02-01 22:41:57 -0300
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XxcKOtSV86v8fEWzZtCzGO/0xQK1GI2Y3IDHOGWNi/vWDoVPJaC0KVrIC9sMr7WHymz2DiQ5lR2mQF6EI/hB0g==", "post"=>{"title"=>"markdown", "body"=>"\r\n#ASM Basics\r\n\r\n\r\nIf you decide to embark into the exploitation world, reading Assembler and understand the basics of how the memory and CPU works, will help you to not feel overwhelm with the intimidating debugging process.\r\n\r\nSo, grab your favorite Linux flavor and perform the installation of “nasm”, the Intel Assembler. Also keep in mind that the registers have different names according to the architecture.  For example, the Instruction Pointer is called IP on 16 bits, EIP on 32 bits and RIP on 64bits. Ill be using KALI 32bits, so my codes and samples will always refer to the 32 bits registers. \r\n\r\nA 32-bit Linux Flavor, runs in protected mode, has flat memory model, and uses the ELF format for binaries.\r\n\r\n### Our first code\r\n\r\nGrab your favorite editor (nano, vim, gedit) and lets write ASM code. \r\n\r\nA program can be divided into sections: .text for your code (read-only), .data for your data (read-write), .bss for uninitialized data (read-write); there can actually be a few other standard sections, as well as some user-defined sections, but there's rare need to use them and they are out of our interest here. Any program must have at least .text section.\r\n\r\nCreate a file called \"hello.asm\" with this content:\r\n\r\n```\r\nsection     .text\r\nglobal      _start                ;must be declared for linker (ld)\r\n\r\n_start:                           ;tell linker entry point\r\n\r\n    mov     edx,len               ;edx will hold the message length\r\n    mov     ecx,msg               ;ecx hold the message to write\r\n    mov     ebx,1                 ;file descriptor (stdout)\r\n    mov     eax,4                 ;system call number (sys_write)\r\n    int     0x80                  ;call kernel\r\n\r\n    mov     eax,1                 ;system call number (sys_exit)\r\n    int     0x80                  ;call kernel\r\n\r\nsection     .data                 ; where we store our vars\r\n\r\n    msg     db  'Hello, world!',0xa             ;the string\r\n```\r\n\r\nSave the file, and lets produce the ELF object file:\r\n\r\n```\r\n$ nasm -f elf hello.asm \r\n```\r\n\r\nUsing the linker we can produce the executable:\r\n\r\n```\r\n$ ld -s -o hello hello.o \r\n```\r\n\r\nAnd finally, run the program:\r\n\r\n```\r\n$ ./hello \r\nHello, world!\r\n```\r\n\r\n## Know your registers\r\n\r\n**EDX** : data, this is an extension of the EAX register. It allows for more complex calculations (multiply, divide) by allowing extra data to be stored to facilitate those calculations. In this sample, we will use it to store the location of the message length.\r\n\r\n**ECX** : counter, used for iterations. ECX counts downward, and again being used just to store the message location.\r\n\r\n**EBX** : base (does not have anything to do with base pointer). It has no general purpose and can be used to store data, and for us will be use the stdout (show the output directly on the terminal).\r\n\r\n**EAX** : accumulator, used for performing calculations, and used to store return values from function calls. Basic operations such as add, subtract, compare use this general-purpose register. We will use a lot the EAX register later, but here we will store the system call number.\r\n\r\n**DB**  : Declare a byte, referred to as location (msg), containing the value 'Hello, world!'.\r\n\r\n**EQU** : The EQU directive is used for defining constants and can be expressions. In this case store the length of the msg. \r\n\r\n\r\n## About System calls\r\n\r\nWe use a direct kernel call (int 0x80), since this is the fastest way to call kernel service. Also, our code is not linked to any library, does not use ELF interpreter, it communicates with kernel directly.\r\n\r\nUnless a program is just implementing some math algorithms in assembly, it will deal with such things as getting input, producing output, and exiting. For this, it will need to call on OS services. In fact, programming in assembly language is quite the same in different OSes, unless OS services are touched.\r\n\r\n\r\n\r\n\r\n\r\n \r\n\r\n", "tag_list"=>"test"}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "markdown"], ["body", "\r\n#ASM Basics\r\n\r\n\r\nIf you decide to embark into the exploitation world, reading Assembler and understand the basics of how the memory and CPU works, will help you to not feel overwhelm with the intimidating debugging process.\r\n\r\nSo, grab your favorite Linux flavor and perform the installation of “nasm”, the Intel Assembler. Also keep in mind that the registers have different names according to the architecture.  For example, the Instruction Pointer is called IP on 16 bits, EIP on 32 bits and RIP on 64bits. Ill be using KALI 32bits, so my codes and samples will always refer to the 32 bits registers. \r\n\r\nA 32-bit Linux Flavor, runs in protected mode, has flat memory model, and uses the ELF format for binaries.\r\n\r\n### Our first code\r\n\r\nGrab your favorite editor (nano, vim, gedit) and lets write ASM code. \r\n\r\nA program can be divided into sections: .text for your code (read-only), .data for your data (read-write), .bss for uninitialized data (read-write); there can actually be a few other standard sections, as well as some user-defined sections, but there's rare need to use them and they are out of our interest here. Any program must have at least .text section.\r\n\r\nCreate a file called \"hello.asm\" with this content:\r\n\r\n```\r\nsection     .text\r\nglobal      _start                ;must be declared for linker (ld)\r\n\r\n_start:                           ;tell linker entry point\r\n\r\n    mov     edx,len               ;edx will hold the message length\r\n    mov     ecx,msg               ;ecx hold the message to write\r\n    mov     ebx,1                 ;file descriptor (stdout)\r\n    mov     eax,4                 ;system call number (sys_write)\r\n    int     0x80                  ;call kernel\r\n\r\n    mov     eax,1                 ;system call number (sys_exit)\r\n    int     0x80                  ;call kernel\r\n\r\nsection     .data                 ; where we store our vars\r\n\r\n    msg     db  'Hello, world!',0xa             ;the string\r\n```\r\n\r\nSave the file, and lets produce the ELF object file:\r\n\r\n```\r\n$ nasm -f elf hello.asm \r\n```\r\n\r\nUsing the linker we can produce the executable:\r\n\r\n```\r\n$ ld -s -o hello hello.o \r\n```\r\n\r\nAnd finally, run the program:\r\n\r\n```\r\n$ ./hello \r\nHello, world!\r\n```\r\n\r\n## Know your registers\r\n\r\n**EDX** : data, this is an extension of the EAX register. It allows for more complex calculations (multiply, divide) by allowing extra data to be stored to facilitate those calculations. In this sample, we will use it to store the location of the message length.\r\n\r\n**ECX** : counter, used for iterations. ECX counts downward, and again being used just to store the message location.\r\n\r\n**EBX** : base (does not have anything to do with base pointer). It has no general purpose and can be used to store data, and for us will be use the stdout (show the output directly on the terminal).\r\n\r\n**EAX** : accumulator, used for performing calculations, and used to store return values from function calls. Basic operations such as add, subtract, compare use this general-purpose register. We will use a lot the EAX register later, but here we will store the system call number.\r\n\r\n**DB**  : Declare a byte, referred to as location (msg), containing the value 'Hello, world!'.\r\n\r\n**EQU** : The EQU directive is used for defining constants and can be expressions. In this case store the length of the msg. \r\n\r\n\r\n## About System calls\r\n\r\nWe use a direct kernel call (int 0x80), since this is the fastest way to call kernel service. Also, our code is not linked to any library, does not use ELF interpreter, it communicates with kernel directly.\r\n\r\nUnless a program is just implementing some math algorithms in assembly, it will deal with such things as getting input, producing output, and exiting. For this, it will need to call on OS services. In fact, programming in assembly language is quite the same in different OSes, unless OS services are touched.\r\n\r\n\r\n\r\n\r\n\r\n \r\n\r\n"], ["created_at", 2017-02-02 01:41:57 UTC], ["updated_at", 2017-02-02 01:41:57 UTC]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE (LOWER(name) = LOWER('test'))[0m
+  [1m[36mActsAsTaggableOn::Tag Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "tags" WHERE "tags"."name" = ? LIMIT ?[0m  [["name", "test"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "tags" ("name") VALUES (?)[0m  [["name", "test"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 9], ["taggable_type", "Post"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tagging Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "taggings" WHERE "taggings"."tag_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."taggable_id" = ? AND "taggings"."context" = ? AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL LIMIT ?[0m  [["tag_id", 9], ["taggable_type", "Post"], ["taggable_id", 9], ["context", "tags"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "taggings" ("tag_id", "taggable_type", "taggable_id", "context", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["tag_id", 9], ["taggable_type", "Post"], ["taggable_id", 9], ["context", "tags"], ["created_at", 2017-02-02 01:41:57 UTC]]
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) + 1 WHERE "tags"."id" = ?[0m  [["id", 9]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/9
+Completed 302 Found in 18ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/posts/9" for ::1 at 2017-02-01 22:41:57 -0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (Symbol or String expected, but NilClass given.):
+    17:   </div>
+    18: 
+    19:   <div class="post_body">
+    20:     <%= markdown(@post.body) %>
+    21:   </div>
+    22: 
+    23:   <div class="post_tags">
+  
+app/helpers/application_helper.rb:4:in `block_code'
+app/helpers/application_helper.rb:17:in `render'
+app/helpers/application_helper.rb:17:in `markdown'
+app/views/posts/show.html.erb:20:in `_app_views_posts_show_html_erb___3795691039575284803_70316690617040'
+  Rendering /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (66.4ms)
+Started GET "/posts/9" for ::1 at 2017-02-01 22:42:16 -0300
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:PostsController> at /Users/alex/Workspace/rails_blog/app/controllers/posts_controller.rb:3)
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (15.9ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 2, expected 1)):
+    17:   </div>
+    18: 
+    19:   <div class="post_body">
+    20:     <%= markdown(@post.body) %>
+    21:   </div>
+    22: 
+    23:   <div class="post_tags">
+  
+app/helpers/application_helper.rb:3:in `block_code'
+app/helpers/application_helper.rb:17:in `render'
+app/helpers/application_helper.rb:17:in `markdown'
+app/views/posts/show.html.erb:20:in `_app_views_posts_show_html_erb___3795691039575284803_70316736623240'
+  Rendering /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (63.5ms)
+Started GET "/posts/9" for ::1 at 2017-02-01 22:44:37 -0300
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:PostsController> at /Users/alex/Workspace/rails_blog/app/controllers/posts_controller.rb:3)
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (11.5ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (Symbol or String expected, but NilClass given.):
+    17:   </div>
+    18: 
+    19:   <div class="post_body">
+    20:     <%= markdown(@post.body) %>
+    21:   </div>
+    22: 
+    23:   <div class="post_tags">
+  
+app/helpers/application_helper.rb:4:in `block_code'
+app/helpers/application_helper.rb:17:in `render'
+app/helpers/application_helper.rb:17:in `markdown'
+app/views/posts/show.html.erb:20:in `_app_views_posts_show_html_erb___3795691039575284803_70316692274840'
+  Rendering /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (65.1ms)
+Started GET "/posts/new" for ::1 at 2017-02-01 22:54:11 -0300
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (3.4ms)
+  Rendered posts/new.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/posts" for ::1 at 2017-02-01 22:54:16 -0300
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xfWc51WUQdb22cTRaE2hY246zlpudYxahDALBd/D4IhE9bhd8Jg8b/oD9m7E/TZCrPD8t6JPGM3SAHiro80DXA==", "post"=>{"title"=>"test", "body"=>"\r\n#ASM Basics\r\n\r\n\r\nIf you decide to embark into the exploitation world, reading Assembler and understand the basics of how the memory and CPU works, will help you to not feel overwhelm with the intimidating debugging process.\r\n\r\nSo, grab your favorite Linux flavor and perform the installation of “nasm”, the Intel Assembler. Also keep in mind that the registers have different names according to the architecture.  For example, the Instruction Pointer is called IP on 16 bits, EIP on 32 bits and RIP on 64bits. Ill be using KALI 32bits, so my codes and samples will always refer to the 32 bits registers. \r\n\r\nA 32-bit Linux Flavor, runs in protected mode, has flat memory model, and uses the ELF format for binaries.\r\n\r\n### Our first code\r\n\r\nGrab your favorite editor (nano, vim, gedit) and lets write ASM code. \r\n\r\nA program can be divided into sections: .text for your code (read-only), .data for your data (read-write), .bss for uninitialized data (read-write); there can actually be a few other standard sections, as well as some user-defined sections, but there's rare need to use them and they are out of our interest here. Any program must have at least .text section.\r\n\r\nCreate a file called \"hello.asm\" with this content:\r\n\r\n```\r\n<code lang=\"asm\">\r\nsection     .text\r\nglobal      _start                ;must be declared for linker (ld)\r\n\r\n_start:                           ;tell linker entry point\r\n\r\n    mov     edx,len               ;edx will hold the message length\r\n    mov     ecx,msg               ;ecx hold the message to write\r\n    mov     ebx,1                 ;file descriptor (stdout)\r\n    mov     eax,4                 ;system call number (sys_write)\r\n    int     0x80                  ;call kernel\r\n\r\n    mov     eax,1                 ;system call number (sys_exit)\r\n    int     0x80                  ;call kernel\r\n\r\nsection     .data                 ; where we store our vars\r\n\r\n    msg     db  'Hello, world!',0xa             ;the string\r\n</code>\r\n```\r\n\r\nSave the file, and lets produce the ELF object file:\r\n\r\n```\r\n<code lang=\"bash\">\r\n$ nasm -f elf hello.asm \r\n</code>\r\n```\r\n\r\nUsing the linker we can produce the executable:\r\n\r\n```\r\n<code lang=\"bash\">\r\n$ ld -s -o hello hello.o \r\n</code>\r\n```\r\n\r\nAnd finally, run the program:\r\n\r\n```\r\n<code lang=\"bash\">\r\n$ ./hello \r\nHello, world!\r\n</code>\r\n```\r\n\r\n## Know your registers\r\n\r\n**EDX** : data, this is an extension of the EAX register. It allows for more complex calculations (multiply, divide) by allowing extra data to be stored to facilitate those calculations. In this sample, we will use it to store the location of the message length.\r\n\r\n**ECX** : counter, used for iterations. ECX counts downward, and again being used just to store the message location.\r\n\r\n**EBX** : base (does not have anything to do with base pointer). It has no general purpose and can be used to store data, and for us will be use the stdout (show the output directly on the terminal).\r\n\r\n**EAX** : accumulator, used for performing calculations, and used to store return values from function calls. Basic operations such as add, subtract, compare use this general-purpose register. We will use a lot the EAX register later, but here we will store the system call number.\r\n\r\n**DB**  : Declare a byte, referred to as location (msg), containing the value 'Hello, world!'.\r\n\r\n**EQU** : The EQU directive is used for defining constants and can be expressions. In this case store the length of the msg. \r\n\r\n\r\n## About System calls\r\n\r\nWe use a direct kernel call (int 0x80), since this is the fastest way to call kernel service. Also, our code is not linked to any library, does not use ELF interpreter, it communicates with kernel directly.\r\n\r\nUnless a program is just implementing some math algorithms in assembly, it will deal with such things as getting input, producing output, and exiting. For this, it will need to call on OS services. In fact, programming in assembly language is quite the same in different OSes, unless OS services are touched.\r\n\r\n\r\n\r\n\r\n\r\n \r\n\r\n", "tag_list"=>"test"}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (1.9ms)
+  Rendered posts/new.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 26ms (Views: 22.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/posts" for ::1 at 2017-02-01 22:54:19 -0300
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v5hd/ueRWrC7y2ejuni/rqabXYLr7QkefR3XJwgyxOM+mHlEQp0nCbcRVRwWyCiPZFFvbyfXnYkrLaSJdDwnNw==", "post"=>{"title"=>"testtest", "body"=>"\r\n#ASM Basics\r\n\r\n\r\nIf you decide to embark into the exploitation world, reading Assembler and understand the basics of how the memory and CPU works, will help you to not feel overwhelm with the intimidating debugging process.\r\n\r\nSo, grab your favorite Linux flavor and perform the installation of “nasm”, the Intel Assembler. Also keep in mind that the registers have different names according to the architecture.  For example, the Instruction Pointer is called IP on 16 bits, EIP on 32 bits and RIP on 64bits. Ill be using KALI 32bits, so my codes and samples will always refer to the 32 bits registers. \r\n\r\nA 32-bit Linux Flavor, runs in protected mode, has flat memory model, and uses the ELF format for binaries.\r\n\r\n### Our first code\r\n\r\nGrab your favorite editor (nano, vim, gedit) and lets write ASM code. \r\n\r\nA program can be divided into sections: .text for your code (read-only), .data for your data (read-write), .bss for uninitialized data (read-write); there can actually be a few other standard sections, as well as some user-defined sections, but there's rare need to use them and they are out of our interest here. Any program must have at least .text section.\r\n\r\nCreate a file called \"hello.asm\" with this content:\r\n\r\n```\r\n<code lang=\"asm\">\r\nsection     .text\r\nglobal      _start                ;must be declared for linker (ld)\r\n\r\n_start:                           ;tell linker entry point\r\n\r\n    mov     edx,len               ;edx will hold the message length\r\n    mov     ecx,msg               ;ecx hold the message to write\r\n    mov     ebx,1                 ;file descriptor (stdout)\r\n    mov     eax,4                 ;system call number (sys_write)\r\n    int     0x80                  ;call kernel\r\n\r\n    mov     eax,1                 ;system call number (sys_exit)\r\n    int     0x80                  ;call kernel\r\n\r\nsection     .data                 ; where we store our vars\r\n\r\n    msg     db  'Hello, world!',0xa             ;the string\r\n</code>\r\n```\r\n\r\nSave the file, and lets produce the ELF object file:\r\n\r\n```\r\n<code lang=\"bash\">\r\n$ nasm -f elf hello.asm \r\n</code>\r\n```\r\n\r\nUsing the linker we can produce the executable:\r\n\r\n```\r\n<code lang=\"bash\">\r\n$ ld -s -o hello hello.o \r\n</code>\r\n```\r\n\r\nAnd finally, run the program:\r\n\r\n```\r\n<code lang=\"bash\">\r\n$ ./hello \r\nHello, world!\r\n</code>\r\n```\r\n\r\n## Know your registers\r\n\r\n**EDX** : data, this is an extension of the EAX register. It allows for more complex calculations (multiply, divide) by allowing extra data to be stored to facilitate those calculations. In this sample, we will use it to store the location of the message length.\r\n\r\n**ECX** : counter, used for iterations. ECX counts downward, and again being used just to store the message location.\r\n\r\n**EBX** : base (does not have anything to do with base pointer). It has no general purpose and can be used to store data, and for us will be use the stdout (show the output directly on the terminal).\r\n\r\n**EAX** : accumulator, used for performing calculations, and used to store return values from function calls. Basic operations such as add, subtract, compare use this general-purpose register. We will use a lot the EAX register later, but here we will store the system call number.\r\n\r\n**DB**  : Declare a byte, referred to as location (msg), containing the value 'Hello, world!'.\r\n\r\n**EQU** : The EQU directive is used for defining constants and can be expressions. In this case store the length of the msg. \r\n\r\n\r\n## About System calls\r\n\r\nWe use a direct kernel call (int 0x80), since this is the fastest way to call kernel service. Also, our code is not linked to any library, does not use ELF interpreter, it communicates with kernel directly.\r\n\r\nUnless a program is just implementing some math algorithms in assembly, it will deal with such things as getting input, producing output, and exiting. For this, it will need to call on OS services. In fact, programming in assembly language is quite the same in different OSes, unless OS services are touched.\r\n\r\n\r\n\r\n\r\n\r\n \r\n\r\n", "tag_list"=>"test"}, "commit"=>"Send"}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "testtest"], ["body", "\r\n#ASM Basics\r\n\r\n\r\nIf you decide to embark into the exploitation world, reading Assembler and understand the basics of how the memory and CPU works, will help you to not feel overwhelm with the intimidating debugging process.\r\n\r\nSo, grab your favorite Linux flavor and perform the installation of “nasm”, the Intel Assembler. Also keep in mind that the registers have different names according to the architecture.  For example, the Instruction Pointer is called IP on 16 bits, EIP on 32 bits and RIP on 64bits. Ill be using KALI 32bits, so my codes and samples will always refer to the 32 bits registers. \r\n\r\nA 32-bit Linux Flavor, runs in protected mode, has flat memory model, and uses the ELF format for binaries.\r\n\r\n### Our first code\r\n\r\nGrab your favorite editor (nano, vim, gedit) and lets write ASM code. \r\n\r\nA program can be divided into sections: .text for your code (read-only), .data for your data (read-write), .bss for uninitialized data (read-write); there can actually be a few other standard sections, as well as some user-defined sections, but there's rare need to use them and they are out of our interest here. Any program must have at least .text section.\r\n\r\nCreate a file called \"hello.asm\" with this content:\r\n\r\n```\r\n<code lang=\"asm\">\r\nsection     .text\r\nglobal      _start                ;must be declared for linker (ld)\r\n\r\n_start:                           ;tell linker entry point\r\n\r\n    mov     edx,len               ;edx will hold the message length\r\n    mov     ecx,msg               ;ecx hold the message to write\r\n    mov     ebx,1                 ;file descriptor (stdout)\r\n    mov     eax,4                 ;system call number (sys_write)\r\n    int     0x80                  ;call kernel\r\n\r\n    mov     eax,1                 ;system call number (sys_exit)\r\n    int     0x80                  ;call kernel\r\n\r\nsection     .data                 ; where we store our vars\r\n\r\n    msg     db  'Hello, world!',0xa             ;the string\r\n</code>\r\n```\r\n\r\nSave the file, and lets produce the ELF object file:\r\n\r\n```\r\n<code lang=\"bash\">\r\n$ nasm -f elf hello.asm \r\n</code>\r\n```\r\n\r\nUsing the linker we can produce the executable:\r\n\r\n```\r\n<code lang=\"bash\">\r\n$ ld -s -o hello hello.o \r\n</code>\r\n```\r\n\r\nAnd finally, run the program:\r\n\r\n```\r\n<code lang=\"bash\">\r\n$ ./hello \r\nHello, world!\r\n</code>\r\n```\r\n\r\n## Know your registers\r\n\r\n**EDX** : data, this is an extension of the EAX register. It allows for more complex calculations (multiply, divide) by allowing extra data to be stored to facilitate those calculations. In this sample, we will use it to store the location of the message length.\r\n\r\n**ECX** : counter, used for iterations. ECX counts downward, and again being used just to store the message location.\r\n\r\n**EBX** : base (does not have anything to do with base pointer). It has no general purpose and can be used to store data, and for us will be use the stdout (show the output directly on the terminal).\r\n\r\n**EAX** : accumulator, used for performing calculations, and used to store return values from function calls. Basic operations such as add, subtract, compare use this general-purpose register. We will use a lot the EAX register later, but here we will store the system call number.\r\n\r\n**DB**  : Declare a byte, referred to as location (msg), containing the value 'Hello, world!'.\r\n\r\n**EQU** : The EQU directive is used for defining constants and can be expressions. In this case store the length of the msg. \r\n\r\n\r\n## About System calls\r\n\r\nWe use a direct kernel call (int 0x80), since this is the fastest way to call kernel service. Also, our code is not linked to any library, does not use ELF interpreter, it communicates with kernel directly.\r\n\r\nUnless a program is just implementing some math algorithms in assembly, it will deal with such things as getting input, producing output, and exiting. For this, it will need to call on OS services. In fact, programming in assembly language is quite the same in different OSes, unless OS services are touched.\r\n\r\n\r\n\r\n\r\n\r\n \r\n\r\n"], ["created_at", 2017-02-02 01:54:20 UTC], ["updated_at", 2017-02-02 01:54:20 UTC]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE (LOWER(name) = LOWER('test'))[0m
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 10], ["taggable_type", "Post"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tagging Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "taggings" WHERE "taggings"."tag_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."taggable_id" = ? AND "taggings"."context" = ? AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL LIMIT ?[0m  [["tag_id", 9], ["taggable_type", "Post"], ["taggable_id", 10], ["context", "tags"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "taggings" ("tag_id", "taggable_type", "taggable_id", "context", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["tag_id", 9], ["taggable_type", "Post"], ["taggable_id", 10], ["context", "tags"], ["created_at", 2017-02-02 01:54:20 UTC]]
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) + 1 WHERE "tags"."id" = ?[0m  [["id", 9]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/10
+Completed 302 Found in 17ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/posts/10" for ::1 at 2017-02-01 22:54:20 -0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (Symbol or String expected, but NilClass given.):
+    17:   </div>
+    18: 
+    19:   <div class="post_body">
+    20:     <%= markdown(@post.body) %>
+    21:   </div>
+    22: 
+    23:   <div class="post_tags">
+  
+app/helpers/application_helper.rb:4:in `block_code'
+app/helpers/application_helper.rb:17:in `render'
+app/helpers/application_helper.rb:17:in `markdown'
+app/views/posts/show.html.erb:20:in `_app_views_posts_show_html_erb___3795691039575284803_70316690728300'
+  Rendering /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.9ms)
+  Rendering /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/alex/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (65.4ms)
+Started GET "/" for ::1 at 2017-02-01 22:54:31 -0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 10], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [1 times] (0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 9], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [1 times] (0.1ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 7], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [2 times] (0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 6], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [3 times] (0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [1 times] (0.1ms)
+  Rendered posts/index.html.erb within layouts/application (50.5ms)
+Completed 200 OK in 70ms (Views: 66.4ms | ActiveRecord: 1.8ms)
+
+
+Started DELETE "/posts/10" for ::1 at 2017-02-01 22:54:34 -0300
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PUOxqWtpmI8MhYCVzHWPk225mxBWiyyRg6DEtKg6FTC8Q5UTzmXlNgBfsipgxRiyr3Op/ZqxuAbVkLca1DT25A==", "id"=>"10"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.1ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ?[0m  [["taggable_id", 10], ["taggable_type", "Post"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "taggings" WHERE "taggings"."id" = ?[0m  [["id", 11]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) - 1 WHERE "tags"."id" = ?[0m  [["id", 9]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.1ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 10], ["taggable_type", "Post"], ["context", "tags"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 10]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 11ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/posts" for ::1 at 2017-02-01 22:54:34 -0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 9], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [1 times] (0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 7], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [2 times] (0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 6], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [3 times] (0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [1 times] (0.1ms)
+  Rendered posts/index.html.erb within layouts/application (33.9ms)
+Completed 200 OK in 54ms (Views: 51.2ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/posts/9" for ::1 at 2017-02-01 22:54:36 -0300
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"IcZbL9gpPpu/VBSzhfdVizHWbt9hz1HJKrrse3xwOhKgxn+VfSVDIrOOJgwpR8Kq8xxcMq31xV58ip/VAH7Zxg==", "id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.0ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ?[0m  [["taggable_id", 9], ["taggable_type", "Post"]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "taggings" WHERE "taggings"."id" = ?[0m  [["id", 10]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) - 1 WHERE "tags"."id" = ?[0m  [["id", 9]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.1ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 9], ["taggable_type", "Post"], ["context", "tags"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 9]]
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 20ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/posts" for ::1 at 2017-02-01 22:54:36 -0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 7], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [2 times] (0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 6], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [3 times] (0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [1 times] (0.2ms)
+  Rendered posts/index.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 41ms (Views: 39.1ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/posts/7" for ::1 at 2017-02-01 22:54:40 -0300
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"T9klZsqv2+cpPQYp/fEDyAOS4a4BBffLpzFBeF4x9zPO2QHcb6OmXiXnNJZRQZTpwVjTQ80/Y1zxATLWIj8U5w==", "id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.0ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ?[0m  [["taggable_id", 7], ["taggable_type", "Post"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "taggings" WHERE "taggings"."id" = ?[0m  [["id", 6]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.0ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) - 1 WHERE "tags"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "taggings" WHERE "taggings"."id" = ?[0m  [["id", 7]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.0ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) - 1 WHERE "tags"."id" = ?[0m  [["id", 6]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.1ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 7], ["taggable_type", "Post"], ["context", "tags"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 7]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 10ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/posts" for ::1 at 2017-02-01 22:54:40 -0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 6], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [3 times] (0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [1 times] (0.2ms)
+  Rendered posts/index.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 44ms (Views: 42.3ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/posts/6" for ::1 at 2017-02-01 22:54:41 -0300
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0pCXO825d4gbOijgl6YM3e0uok3TtXrOzmcrMwhJfx9TkLOBaLUKMRfgGl87Fpv8L+SQoB+P7lmYV1iddEecyw==", "id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.0ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ?[0m  [["taggable_id", 6], ["taggable_type", "Post"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "taggings" WHERE "taggings"."id" = ?[0m  [["id", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) - 1 WHERE "tags"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "taggings" WHERE "taggings"."id" = ?[0m  [["id", 2]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) - 1 WHERE "tags"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "taggings" WHERE "taggings"."id" = ?[0m  [["id", 3]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.0ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) - 1 WHERE "tags"."id" = ?[0m  [["id", 3]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.1ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 6], ["taggable_type", "Post"], ["context", "tags"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 32ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/posts" for ::1 at 2017-02-01 22:54:41 -0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [1 times] (0.4ms)
+  Rendered posts/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/posts/2" for ::1 at 2017-02-01 22:54:45 -0300
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6sMgOwGbYxP5Xz+HqrXgA96DSQ8PERTnYoeSB6P6cnRrwwSBpJceqvWFDTgGBXciHEl74sMrgHA0t+Gp3/SRoA==", "id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 3]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.0ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ?[0m  [["taggable_id", 2], ["taggable_type", "Post"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "taggings" WHERE "taggings"."id" = ?[0m  [["id", 8]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.0ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) - 1 WHERE "tags"."id" = ?[0m  [["id", 7]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.1ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 14ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/posts" for ::1 at 2017-02-01 22:54:45 -0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for ::1 at 2017-02-01 22:54:47 -0300
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (3.6ms)
+  Rendered posts/new.html.erb within layouts/application (5.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 28ms (Views: 25.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/posts" for ::1 at 2017-02-01 23:01:37 -0300
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gsNBmAf7Av8QWelvUZ70pETnA4+TfT26Vm6qFj7sqdoL2s7t9s5Ffbbtpwc74fI7YX8wgwJcJT8srjOqeJlj8w==", "post"=>{"title"=>"another test", "body"=>"\r\n#ASM Basics\r\n\r\n\r\nIf you decide to embark into the exploitation world, reading Assembler and understand the basics of how the memory and CPU works, will help you to not feel overwhelm with the intimidating debugging process.\r\n\r\nSo, grab your favorite Linux flavor and perform the installation of “nasm”, the Intel Assembler. Also keep in mind that the registers have different names according to the architecture.  For example, the Instruction Pointer is called IP on 16 bits, EIP on 32 bits and RIP on 64bits. Ill be using KALI 32bits, so my codes and samples will always refer to the 32 bits registers. \r\n\r\nA 32-bit Linux Flavor, runs in protected mode, has flat memory model, and uses the ELF format for binaries.\r\n\r\n### Our first code\r\n\r\nGrab your favorite editor (nano, vim, gedit) and lets write ASM code. \r\n\r\nA program can be divided into sections: .text for your code (read-only), .data for your data (read-write), .bss for uninitialized data (read-write); there can actually be a few other standard sections, as well as some user-defined sections, but there's rare need to use them and they are out of our interest here. Any program must have at least .text section.\r\n\r\nCreate a file called \"hello.asm\" with this content:\r\n\r\n```asm\r\nsection     .text\r\nglobal      _start                ;must be declared for linker (ld)\r\n\r\n_start:                           ;tell linker entry point\r\n\r\n    mov     edx,len               ;edx will hold the message length\r\n    mov     ecx,msg               ;ecx hold the message to write\r\n    mov     ebx,1                 ;file descriptor (stdout)\r\n    mov     eax,4                 ;system call number (sys_write)\r\n    int     0x80                  ;call kernel\r\n\r\n    mov     eax,1                 ;system call number (sys_exit)\r\n    int     0x80                  ;call kernel\r\n\r\nsection     .data                 ; where we store our vars\r\n\r\n    msg     db  'Hello, world!',0xa             ;the string\r\n```\r\n\r\nSave the file, and lets produce the ELF object file:\r\n\r\n```text\r\n$ nasm -f elf hello.asm \r\n```\r\n\r\nUsing the linker we can produce the executable:\r\n\r\n```text\r\n$ ld -s -o hello hello.o \r\n```\r\n\r\nAnd finally, run the program:\r\n\r\n```text\r\n$ ./hello \r\nHello, world!\r\n```\r\n\r\n## Know your registers\r\n\r\n**EDX** : data, this is an extension of the EAX register. It allows for more complex calculations (multiply, divide) by allowing extra data to be stored to facilitate those calculations. In this sample, we will use it to store the location of the message length.\r\n\r\n**ECX** : counter, used for iterations. ECX counts downward, and again being used just to store the message location.\r\n\r\n**EBX** : base (does not have anything to do with base pointer). It has no general purpose and can be used to store data, and for us will be use the stdout (show the output directly on the terminal).\r\n\r\n**EAX** : accumulator, used for performing calculations, and used to store return values from function calls. Basic operations such as add, subtract, compare use this general-purpose register. We will use a lot the EAX register later, but here we will store the system call number.\r\n\r\n**DB**  : Declare a byte, referred to as location (msg), containing the value 'Hello, world!'.\r\n\r\n**EQU** : The EQU directive is used for defining constants and can be expressions. In this case store the length of the msg. \r\n\r\n\r\n## About System calls\r\n\r\nWe use a direct kernel call (int 0x80), since this is the fastest way to call kernel service. Also, our code is not linked to any library, does not use ELF interpreter, it communicates with kernel directly.\r\n\r\nUnless a program is just implementing some math algorithms in assembly, it will deal with such things as getting input, producing output, and exiting. For this, it will need to call on OS services. In fact, programming in assembly language is quite the same in different OSes, unless OS services are touched.\r\n\r\n\r\n\r\n\r\n\r\n \r\n\r\n", "tag_list"=>"abc"}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "another test"], ["body", "\r\n#ASM Basics\r\n\r\n\r\nIf you decide to embark into the exploitation world, reading Assembler and understand the basics of how the memory and CPU works, will help you to not feel overwhelm with the intimidating debugging process.\r\n\r\nSo, grab your favorite Linux flavor and perform the installation of “nasm”, the Intel Assembler. Also keep in mind that the registers have different names according to the architecture.  For example, the Instruction Pointer is called IP on 16 bits, EIP on 32 bits and RIP on 64bits. Ill be using KALI 32bits, so my codes and samples will always refer to the 32 bits registers. \r\n\r\nA 32-bit Linux Flavor, runs in protected mode, has flat memory model, and uses the ELF format for binaries.\r\n\r\n### Our first code\r\n\r\nGrab your favorite editor (nano, vim, gedit) and lets write ASM code. \r\n\r\nA program can be divided into sections: .text for your code (read-only), .data for your data (read-write), .bss for uninitialized data (read-write); there can actually be a few other standard sections, as well as some user-defined sections, but there's rare need to use them and they are out of our interest here. Any program must have at least .text section.\r\n\r\nCreate a file called \"hello.asm\" with this content:\r\n\r\n```asm\r\nsection     .text\r\nglobal      _start                ;must be declared for linker (ld)\r\n\r\n_start:                           ;tell linker entry point\r\n\r\n    mov     edx,len               ;edx will hold the message length\r\n    mov     ecx,msg               ;ecx hold the message to write\r\n    mov     ebx,1                 ;file descriptor (stdout)\r\n    mov     eax,4                 ;system call number (sys_write)\r\n    int     0x80                  ;call kernel\r\n\r\n    mov     eax,1                 ;system call number (sys_exit)\r\n    int     0x80                  ;call kernel\r\n\r\nsection     .data                 ; where we store our vars\r\n\r\n    msg     db  'Hello, world!',0xa             ;the string\r\n```\r\n\r\nSave the file, and lets produce the ELF object file:\r\n\r\n```text\r\n$ nasm -f elf hello.asm \r\n```\r\n\r\nUsing the linker we can produce the executable:\r\n\r\n```text\r\n$ ld -s -o hello hello.o \r\n```\r\n\r\nAnd finally, run the program:\r\n\r\n```text\r\n$ ./hello \r\nHello, world!\r\n```\r\n\r\n## Know your registers\r\n\r\n**EDX** : data, this is an extension of the EAX register. It allows for more complex calculations (multiply, divide) by allowing extra data to be stored to facilitate those calculations. In this sample, we will use it to store the location of the message length.\r\n\r\n**ECX** : counter, used for iterations. ECX counts downward, and again being used just to store the message location.\r\n\r\n**EBX** : base (does not have anything to do with base pointer). It has no general purpose and can be used to store data, and for us will be use the stdout (show the output directly on the terminal).\r\n\r\n**EAX** : accumulator, used for performing calculations, and used to store return values from function calls. Basic operations such as add, subtract, compare use this general-purpose register. We will use a lot the EAX register later, but here we will store the system call number.\r\n\r\n**DB**  : Declare a byte, referred to as location (msg), containing the value 'Hello, world!'.\r\n\r\n**EQU** : The EQU directive is used for defining constants and can be expressions. In this case store the length of the msg. \r\n\r\n\r\n## About System calls\r\n\r\nWe use a direct kernel call (int 0x80), since this is the fastest way to call kernel service. Also, our code is not linked to any library, does not use ELF interpreter, it communicates with kernel directly.\r\n\r\nUnless a program is just implementing some math algorithms in assembly, it will deal with such things as getting input, producing output, and exiting. For this, it will need to call on OS services. In fact, programming in assembly language is quite the same in different OSes, unless OS services are touched.\r\n\r\n\r\n\r\n\r\n\r\n \r\n\r\n"], ["created_at", 2017-02-02 02:01:37 UTC], ["updated_at", 2017-02-02 02:01:37 UTC]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE (LOWER(name) = LOWER('abc'))[0m
+  [1m[36mActsAsTaggableOn::Tag Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "tags" WHERE "tags"."name" = ? LIMIT ?[0m  [["name", "abc"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "tags" ("name") VALUES (?)[0m  [["name", "abc"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 11], ["taggable_type", "Post"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tagging Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "taggings" WHERE "taggings"."tag_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."taggable_id" = ? AND "taggings"."context" = ? AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL LIMIT ?[0m  [["tag_id", 10], ["taggable_type", "Post"], ["taggable_id", 11], ["context", "tags"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "taggings" ("tag_id", "taggable_type", "taggable_id", "context", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["tag_id", 10], ["taggable_type", "Post"], ["taggable_id", 11], ["context", "tags"], ["created_at", 2017-02-02 02:01:37 UTC]]
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) + 1 WHERE "tags"."id" = ?[0m  [["id", 10]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/11
+Completed 302 Found in 13ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/posts/11" for ::1 at 2017-02-01 23:01:37 -0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 11], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [1 times] (0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 11]]
+  Rendered comments/_form.html.erb (3.8ms)
+  Rendered posts/show.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 40ms (Views: 37.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/11/edit" for ::1 at 2017-02-01 23:02:15 -0300
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  [1m[36mActsAsTaggableOn::Tagging Load (0.2ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ?[0m  [["taggable_id", 11], ["taggable_type", "Post"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 11], ["taggable_type", "Post"]]
+  Rendered posts/_form.html.erb (12.4ms)
+  Rendered posts/edit.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 41ms (Views: 36.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for ::1 at 2017-02-01 23:02:17 -0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 11]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 11], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [1 times] (0.5ms)
+  Rendered posts/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.5ms)
+
+

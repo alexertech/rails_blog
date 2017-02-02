@@ -52,6 +52,12 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # password security
 gem 'bcrypt-ruby', '~> 3.1.5', require: "bcrypt"
 
+# Font awesome Just because...
 gem "font-awesome-rails"
 
+# Tags
 gem 'acts-as-taggable-on'
+
+# Markdown
+gem 'redcarpet'
+gem 'coderay'
