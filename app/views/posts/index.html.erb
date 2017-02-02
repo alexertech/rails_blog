@@ -17,7 +17,7 @@
     <%= post.created_at.strftime("%d %b. %Y") %>
   </div>
   <div class="post_body">
-    <%= post.body.html_safe %>
+    <%= markdown(post.body) %>
   </div>
   <div class="post_tags">
     <%= render post.tags %>

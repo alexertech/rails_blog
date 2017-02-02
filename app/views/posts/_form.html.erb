@@ -14,17 +14,17 @@
 
   <div class="field">
     <%= f.label :title %>
-    <%= f.text_field :title, size: 78 %>
+    <%= f.text_field :title, size: 70 %>
   </div>
 
   <div class="field">
     <%= f.label :body %>
-    <%= f.text_area :body%>
+    <%= f.text_area :body, cols: 59, rows: 30%>
   </div>
 
   <div class="field">
-    <%= f.label :tag %>
-    <%= f.text_field :tag_list, value: f.object.tag_list.to_s %>
+    <%= f.label :tags %>
+    <%= f.text_field :tag_list, value: f.object.tag_list.to_s, size: 70 %>
   </div>
 
   <div class="actions">
