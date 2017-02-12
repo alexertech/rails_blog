@@ -4,7 +4,7 @@
     <title>alexertech's blog</title>
     <%= csrf_meta_tags %>
 
-    <%= favicon_link_tag %>    
+    <%= favicon_link_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
@@ -21,6 +21,7 @@
         <%= current_user.username %> |
         <%= link_to 'New Post', new_post_path %> |
         <%= link_to "Logout", '/log-out' %>
+        <%= @posts.commments.count %> 
 
         <% else %>
 
@@ -29,9 +30,7 @@
         <% end %>
       </div>
 
-      <div id="logo">
-        <%= image_tag "megaman_banner.jpg" %>
-      </div>
+      <div id="logo"><%= image_tag "megaman_banner.jpg" %></div>
 
       <div id="slogan">
         <strong>A</strong>nother

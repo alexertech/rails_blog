@@ -21,7 +21,7 @@ body {
     font-family       : sans-serif;
     color             : #000;
     text-align        : justify;
-    background-color  : #ccc;
+    background-color  : #444;
 }
 
 img {
@@ -64,8 +64,13 @@ div#main {
 div#user_bar{
   padding:5px;
   text-align:right;
-  background-color  : #ccc;
+  background-color  : #444;
+  color:#fff;
 }
+div#logo{
+  background-color  : #444;
+}
+
 
 div#slogan {
     text-align:center;
@@ -73,6 +78,12 @@ div#slogan {
     font-family:monospace;
     border-bottom:1px solid #ccc;
     padding:5px;
+    background-color  : #444;
+    color:#fff;
+  }
+
+div#user_bar a, div#slogan a{
+  color:#fff;
 }
 
 div#slogan strong{
@@ -81,6 +92,7 @@ div#slogan strong{
 
 div.post{
   padding:30px;
+  border-bottom : 30px solid #444;
 }
 
 div.post_title {
