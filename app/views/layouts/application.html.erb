@@ -19,6 +19,7 @@
         <% if current_user %>
 
         <%= current_user.username %> |
+        Comments (<%= Comment.all.count  %>) |
         <%= link_to 'New Post', new_post_path %> |
         <%= link_to "Logout", '/log-out' %>
 
