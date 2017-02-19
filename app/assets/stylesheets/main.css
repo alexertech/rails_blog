@@ -137,3 +137,8 @@ div.tag_title div {
 div.post_tags{
   padding-top:20px;
 }
+
+a.link_logo:hover{
+  text-decoration: none;
+  border:0;
+}

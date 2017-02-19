@@ -1,7 +1,10 @@
 class CommentsController < ApplicationController
+
+  before_filter :authorize, only: [:index, :destroy]
+
   def create
 
-      @post = Post.find(params[:post_id])   
+      @post = Post.find(params[:post_id])
 
       respond_to do |format|
         if @post.comments.create(params.require(:comment).permit(:author, :body))
@@ -17,5 +20,7 @@ class CommentsController < ApplicationController
       @comment.destroy
       redirect_to post_path(@post)
     end
-
+    def index
+      @comments = Comment.all
+    end
 end
