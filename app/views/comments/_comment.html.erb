@@ -1,9 +1,0 @@
-<p>
-  <%= comment.body %><br><br>
-  - by <%= comment.author %>
-
-  <% if current_user %>
-  | <%= link_to 'Delete', [comment.post, comment],
-      :confirm => 'Sure?', :method => :delete %>
-  <% end %>
-</p>
