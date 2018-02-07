@@ -16,9 +16,8 @@
   <div class="post_tags">
     <%= render post.tags %>
     <div class="post_controls">
-      <%= link_to 'Comments', post %> (<%=post.comments.count%>)
       <% if current_user %>
-      | <%= link_to 'Edit', edit_post_path(post) %>
+      <%= link_to 'Edit', edit_post_path(post) %>
       | <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
       <% end %>
     </div>

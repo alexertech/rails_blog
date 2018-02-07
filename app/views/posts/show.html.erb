@@ -24,16 +24,4 @@
     <strong>Tag(s)</strong> <%= render @post.tags %>
   </div>
 
-  <% if @post.comments.count > 0 %>
-  <div class="post_comments">
-    <strong>Comments (<%=@post.comments.count%>)</strong>
-    <%= render @post.comments %>
-  </div>
-  <% end %>
-
-  <div class="post_add_comment">
-    <strong>Leave a comment</strong><br><br>
-    <%= render "comments/form" %>
-  </div>
-
 </div>
