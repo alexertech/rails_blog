@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'about/show' => "about#show", as: :about
+
   # Default to post's
   root :to => "posts#index"
 

@@ -1,54 +1,117 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>alexertech's blog</title>
+    <title>alexertech by alex b.</title>
+
     <%= csrf_meta_tags %>
 
-    <%= favicon_link_tag %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <script src="/assets/wymeditor/jquery.wymeditor.min.js"></script>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
 
-    <div id="main">
+    <!-- main container -->
+    <div class="container-fluid">
 
-      <div id="user_bar">
-        <% if current_user %>
+      <!-- main grid, 3 colums, 3x6x3 -->
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
 
-        <%= current_user.username %> |
-        <%= link_to 'New Post', new_post_path %> |
-        <%= link_to "Logout", '/log-out' %>
+          <!-- user navbar -->
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12 user-navbar">
+              <% if current_user %>
 
-        <% else %>
+                <%= current_user.username %> |
+                <%= link_to 'New Post', new_post_path %> |
+                <%= link_to "Logout", '/log-out' %>
 
-        <%= link_to 'Login', '/log-in' %>
+              <% else %>
 
-        <% end %>
+                <%= link_to 'Login', '/log-in' %>
+
+              <% end %>
+              </div>
+            </div>
+          </div>
+
+          <!-- main logo -->
+          <div class="container-fluid container-fullw">
+            <div class="row">
+             <div class="col-md-12 site-logo">
+								<%= image_tag "sunrise.png" %>
+              </div>
+            </div>
+          </div>          
+
+          <!-- slogan / site navbar -->
+          <div class="container-fluid">
+            <div class="row">
+               <div class="col-md-12 site-navbar">
+              <strong>a</strong>lexertech
+              <strong>b</strong>y
+              <strong>a</strong>lex
+              <strong>b</strong>.<br>
+              <%= link_to 'Inicio', root_path %>
+              | <%= link_to 'Yo', about_path %>
+              | <%= link_to 'Twitter', "http://twitter.com/alexertech" %>
+              | <%= link_to 'LinkedIn', "https://www.linkedin.com/in/alexertech/" %>
+               </div>
+            </div>
+          </div>   
+
+          <!-- main content -->
+        	<div class="container-fluid post_body">
+						<div class="row">
+							<div class="col-md-12">
+            		<%= yield %>
+							</div>
+						</div>
+					</div>
+
+          <!-- footer -->
+          <div class="container-fluid">
+            <div class="row">
+             <div class="col-md-12 site-footer">
+
+								<p> &copy; Alex B.  2018 </p>
+						 
+						 </div>
+            </div>
+          </div>  
+         
+
+        </div>
+        <div class="col-md-3"></div>
       </div>
-
-      <div id="logo">
-        <%= image_tag "megaman_banner.jpg" %>
-      </div>
-
-      <div id="slogan">
-        <strong>A</strong>nother
-          <strong>R</strong>andom
-            <strong>B</strong>log,
-              <strong>B</strong>y a
-                <strong>R</strong>andom
-                  <strong>C</strong>oder<br>
-        Infosec fun, Coding and Game dev (hopefully) by
-        <a href="http://twitter.com/alexertech" target="_blank">@alexertech</a>
-      </div>
-
-      <div id="content">
-        <%= yield %>
-      </div>
-
     </div>
+
+
+    <!-- JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script>
+    (function() {
+      'use strict'
+      if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+        var msViewportStyle = document.createElement('style')
+        msViewportStyle.appendChild(
+          document.createTextNode(
+            '@-ms-viewport{width:auto!important}'
+          )
+        )
+        document.head.appendChild(msViewportStyle)
+      }
+    }())
+    </script>
 
   </body>
 </html>

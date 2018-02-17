@@ -15,22 +15,19 @@
   *= require font-awesome
  */
 
+.container-fullw {
+	padding:0px!important;
+	margin:0px!important;
+}
+
 body {
-    margin            : 5px;
-    padding           : 5px;
-    font-family       : sans-serif;
-    color             : #000;
+    color             : #000!important ;
+    background-color  : #444!important ;
     text-align        : justify;
-    background-color  : #444;
 }
 
 img {
-    border            : 0px;
-    max-width: 100%
-}
-
-a{
-    color: #2280a7;
+    max-width: 100%!important;
 }
 
 input, textarea, select {
@@ -47,39 +44,82 @@ textarea {
 }
 
 p {
-  margin :0;
-  padding:10px 0 0 0;
 }
 
 p#notice{
   text-aling:center;
 }
 
-div#main {
-    width : 600px;
-    margin-left:auto;
-    margin-right : auto;
-    background-color:#fff;
+.post_body {
+  background-color:#fff;
 }
 
-div#user_bar{
+.post_date{
+}
+
+.post_title {
+}
+
+.post_controls {
+  text-align:right;
+}
+
+.user-navbar{
+  text-align:right;
+  color:#fff;
+}
+.user-navbar a{
+  background-color  : #444;
+  color:#fff;
+  text-decoration: underline;
+}
+
+.site-logo {
+}
+	
+.site-navbar {
+  text-align:center;
+  font-size:small;
+  font-family:monospace;
+
+  background-color  : #000;
+  color:#fff;
+
+}
+.site-navbar a{
+  color:#fff;
+  text-decoration: none;
+}
+
+.site-footer {
+
+}
+
+
+#user_bar{
   padding:5px;
   text-align:right;
   background-color  : #444;
   color:#fff;
+  margin:0!important;
+  padding:0!important;
+  
 }
 div#logo{
   background-color  : #444;
+  margin:0 0 -5px 0;
+
 }
+
+
 
 
 div#slogan {
     text-align:center;
     font-size:small;
     font-family:monospace;
-    border-bottom:1px solid #ccc;
     padding:5px;
-    background-color  : #444;
+    background-color  : #000;
     color:#fff;
   }
 
