@@ -15,10 +15,16 @@
   *= require font-awesome
  */
 
+
+/* --- Bootstrap tweaks --- */ 
+
 .container-fullw {
 	padding:0px!important;
 	margin:0px!important;
 }
+
+
+/* --- General tags overrides --- */
 
 body {
     color             : #000!important ;
@@ -46,42 +52,32 @@ textarea {
 p {
 }
 
-p#notice{
-  text-aling:center;
-}
 
-.post_body {
-  background-color:#fff;
-}
-
-.post_date{
-}
-
-.post_title {
-}
-
-.post_controls {
-  text-align:right;
-}
+/* --- Rails tags --- */
 
 .user-navbar{
   text-align:right;
   color:#fff;
+  margin: 10px 0 10px 0;
 }
+
 .user-navbar a{
   background-color  : #444;
   color:#fff;
   text-decoration: underline;
 }
 
-.site-logo {
+p#notice{
+  text-aling:center;
 }
-	
+
+
+/* --- Main Layout --- */
+
 .site-navbar {
   text-align:center;
   font-size:small;
   font-family:monospace;
-
   background-color  : #000;
   color:#fff;
 
@@ -91,94 +87,35 @@ p#notice{
   text-decoration: none;
 }
 
+.site-body {
+  background-color:#fff;
+}
+
 .site-footer {
-
+	 text-align:center;
+   color:#fff;
+	 margin: 10px 0 10px 0;
 }
 
 
-#user_bar{
-  padding:5px;
-  text-align:right;
-  background-color  : #444;
-  color:#fff;
-  margin:0!important;
-  padding:0!important;
-  
-}
-div#logo{
-  background-color  : #444;
-  margin:0 0 -5px 0;
+/* --- Posts --- */
 
+.post_date{
+	font-size:0.9em;
+	text-align:right;
 }
 
-
-
-
-div#slogan {
-    text-align:center;
-    font-size:small;
-    font-family:monospace;
-    padding:5px;
-    background-color  : #000;
-    color:#fff;
-  }
-
-div#user_bar a, div#slogan a{
-  color:#fff;
-}
-
-div#slogan strong{
-  font-size : 1.2em;
-}
-
-div.post{
-  padding:30px;
-  border-bottom : 30px solid #444;
-}
-
-div.post_title {
+.post_title {
+	margin-top:10px;
   padding-bottom:10px;
   font-size:1.8em;
 }
-div.post_controls {
-  float:right;
-  font-size:small;
+
+.post_tags {
+	font-size:0.9em;
+	text-align:right;
 }
 
-div.post_date {
-  font-style:italic;
-  font-size:small;
+.post_controls {
 }
 
-div.post_actions,
-div.post_comments,
-div.post_add_comment  {
-  padding-top:20px;
-}
-
-div.login_form {
-  padding:30px;
-}
-
-div.post_list {
-  padding:30px;
-}
-div.post_list div {
-  padding : 5px 0 5px 0;
-}
-div.tag_title{
-  padding:30px;
-  padding-bottom: 0;
-  font-size:1.8em;
-}
-div.tag_title div {
-  font-size:small;
-}
-div.post_tags{
-  padding-top:20px;
-}
-
-a.link_logo:hover{
-  text-decoration: none;
-  border:0;
-}
