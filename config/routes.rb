@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
 
-  get 'about/show' => "about#show", as: :about
+  get 'home/index' => "home#index", as: :home
+
+  get 'now' => "about#show", as: :about
 
   # Default to post's
-  root :to => "posts#index"
+  root :to => "home#index"
 
   # resources
   resources :users
