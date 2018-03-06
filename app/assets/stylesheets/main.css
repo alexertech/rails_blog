@@ -23,9 +23,10 @@
 	padding:0px!important;
 	margin:0px!important;
 }
+
 .site-main {
 	display:block;
-	max-width:920px;
+	max-width:700px;
   margin:auto;
 }
 
@@ -127,6 +128,10 @@ p#notice{
 
 
 /* --- Posts --- */
+
+.post_body .row{
+  padding:0 20px 0 20px;  
+}
 
 .post_date{
 	font-size:0.9em;

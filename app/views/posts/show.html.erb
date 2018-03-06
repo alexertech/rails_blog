@@ -1,27 +1,33 @@
 <p id="notice"><%= notice %></p>
 
-<div class="post">
+<div class="container-fluid post_body">
 
-  <div class="post_title">
-    <%=@post.title%>
-    <div class="post_controls">
-      <% if current_user %>
-      <%= link_to 'Edit', edit_post_path(@post) %>
-      | <%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } %> |
-      <% end %>
-      <%= link_to 'Back', posts_path %></div>
+  <div class="row">
+    <div class="col-md-12 post_title">
+    <%= @post.title %>
+    </div>
   </div>
 
-  <div class="post_date">
-    <%= @post.created_at.strftime("%d %b. %Y") %>
-  </div>
-
-  <div class="post_body">
+  <div class="row">
+    <div class="col-md-12 post_body">
     <%= markdown(@post.body) %>
+    </div>
   </div>
 
-  <div class="post_tags">
-    <strong>Tag(s)</strong> <%= render @post.tags %>
-  </div>
-
+	<div class="row">
+			<div class="col-md-4 post_controls">
+        <% if current_user %>
+        <%= link_to 'Edit', edit_post_path(@post) %>
+				| <%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
+			</div>
+			<div class="col-md-6 post_tags">
+				<%= render @post.tags %>
+			</div>
+			<div class="col-md-2 post_date">
+				<%= @post.created_at.strftime("%d %b. %Y") %>
+      </div>
+	</div>
+	<br>
 </div>
+
