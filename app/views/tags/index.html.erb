@@ -1,2 +1,26 @@
-<div class="post_tags">Tags:
-<%= render @tags %>
+<div class="container-fluid tags_main">
+
+  <div class="row">
+    <div class="col-md-12 tags_title">
+      <h4>#Tags</h4>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 tags_list">
+			<%= render @tags %>
+    </div>
+  </div>
+
+	<div class="row">
+	 
+    <br>
+
+    <div class="col-md-12 tags_controls">
+      <%= link_to 'Volver', posts_path %>
+    </div>
+  </div>
+
+	<br>
+</div>
+
