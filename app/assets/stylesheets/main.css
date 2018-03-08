@@ -34,7 +34,7 @@
 
 body {
     color             : #000!important ;
-    background-color  : #444!important ;
+    background-color  : #2f5278!important ;
     text-align        : justify;
     margin:20px!important;
 }
@@ -106,7 +106,7 @@ p#notice{
 
 .site-body {
   border-radius: 0 0 10px 10px;
-  background-color:#fff;
+  background-color:#f5f5f5;
 }
 
 .site-footer {
