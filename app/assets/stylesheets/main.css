@@ -119,17 +119,21 @@ p#notice{
   color:#fff!important;
 }
 
-
+/* --- Pages --- */
 .avatar {
   width:130px;
   float:left;
   margin-right:20px;
 }
 
+.about-page .row {
+  padding: 0 20px 0 20px;
+}
+
 
 /* --- Posts --- */
 
-.post_body .row{
+.post_main .row{
   padding:0 20px 0 20px;  
 }
 
@@ -152,6 +156,19 @@ p#notice{
 .post_controls {
 }
 
-.about-page .row {
-  padding: 0 20px 0 20px;
+/* --- Tags --- */
+.tags_main {
+  padding: 20px 0 20px 0;    
+}
+
+.tags_title {
+
+}
+
+.tags_list {
+
+}
+
+.tags_controls {
+
 }

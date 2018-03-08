@@ -2,10 +2,10 @@
 
 <% @posts.reverse_each do |post| %>
 
-<div class="container-fluid post_body">
+<div class="container-fluid post_main">
   <div class="row">
     <div class="col-md-12 post_title">
-    <%= link_to post.title, post_path(post) %>
+      <%= post.title %>
     </div>
   </div>
 

@@ -1,4 +1,5 @@
-<div>
-  <%= post.created_at.strftime("%d %b. %Y") %> -
-  <%= link_to post.title, post_path(post) %>
-</div>
+<li>
+  <span style="font-size:x-small"><%= post.created_at.strftime("%d %b. %Y") %></span> - 
+  <%= link_to post.title, post_path(post) %> 
+  <br>
+</li>
