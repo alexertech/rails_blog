@@ -43,19 +43,11 @@
               </div>
               <div class="col-xs-4 user-navbar">
               <% if current_user %>
-          
-                <%= current_user.username %>
+                <%= link_to fa_icon("plus-square"), new_post_path %>
                 &nbsp;
-                <%= fa_icon "plus-square" %>
-                <%= link_to 'New Post', new_post_path %>
-                &nbsp;
-                <%= fa_icon "sign-out" %>
-                <%= link_to "Logout", '/log-out' %>
-
+                <%= link_to fa_icon("sign-out"), '/log-out' %>
               <% else %>
-                
-                <%= fa_icon "sign-in" %>
-                <%= link_to 'Login', '/log-in' %>
+                <%= link_to fa_icon("sign-in"), '/log-in' %>
               <% end %>
               </div>
             </div>
