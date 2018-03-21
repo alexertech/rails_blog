@@ -20,38 +20,77 @@
       <div class="row">
 
           <!-- user navbar -->
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-xs-11 site-navbar">
-             
+          
+          <!-- TODO : center navbar buttons in the page -->
 
-                <%= fa_icon "home" %>
-                <%= link_to 'Inicio', root_path %>
-                &nbsp;                
-                <%= fa_icon "user" %>
-                <%= link_to 'Ahora', about_path %> 
-                &nbsp;
-                <%= fa_icon "square" %>
-                <%= link_to 'Blog', posts_path %>
-                &nbsp;
-                <%= fa_icon "twitter" %>
-                <%= link_to 'Twitter', "http://twitter.com/alexertech" %>
-                &nbsp; 
-                <%= fa_icon "linkedin" %>
-                <%= link_to 'LinkedIn', "https://www.linkedin.com/in/alexertech/" %>
+
+          <div class="container-fluid" role="navigation">
+              <ul class="nav nav-pills site-navbar nav-justified">
+                <li>
+                  <%= link_to(root_path) do %>
+                    <%= fa_icon "home" %> Inicio
+                  <% end %>
+                </li>
+                <li>
+                  <%= link_to(about_path) do %>
+                    <%= fa_icon "user" %> Posts
+                  <% end %>
+                </li>
+                <li>
+                  <%= link_to(posts_path) do %>
+                    <%= fa_icon "square" %> Blog
+                  <% end %>
+                </li>
+
+
+                <li role="presentation" class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#" 
+                     role="button" aria-haspopup="true" aria-expanded="false">
+                    Social <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu">
+    
+                    <li>
+                      <%= link_to("http://twitter.com/alexertech") do %>
+                        <%= fa_icon "twitter" %> Twitter
+                      <% end %>
+                    </li>
+                    <li>
+                      <%= link_to("https://www.linkedin.com/in/alexertech/") do %>
+                        <%= fa_icon "linkedin" %> Linkedin
+                      <% end %>
+                    </li>
+
+                  </ul>
+                </li>
+                
+                <% if current_user %>
+
+                <li>
+                  <%= link_to(new_post_path) do %>
+                    <%= fa_icon "plus-square" %> New Post
+                  <% end %>
+                </li>
+                <li>
+                  <%= link_to("/log-out") do %>
+                    <%= fa_icon "sign-out" %> Logout
+                  <% end %>
+                </li>
+
+                <% else %>
                
+                <li>
+                  <%= link_to("/log-in") do %>
+                    <%= fa_icon "sign-in" %> Login
+                  <% end %>
+                </li>               
+                
+                <% end %>
+                </ul>
+                
               </div>
-              <div class="col-xs-1 user-navbar">
-              <% if current_user %>
-                <%= link_to fa_icon("plus-square"), new_post_path %>
-                &nbsp;
-                <%= link_to fa_icon("sign-out"), '/log-out' %>
-              <% else %>
-                <%= link_to fa_icon("sign-in"), '/log-in' %>
-              <% end %>
-              </div>
-            </div>
-          </div>
+
+
 
           <!-- main logo -->
           <div class="container-fluid ">

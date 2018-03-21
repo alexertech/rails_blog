@@ -88,18 +88,25 @@ p#notice{
 /* --- Main Layout --- */
 
 .site-navbar {
-  text-align:left;
-  color:#fff;
+  color:#fff!important;
   font-size:small;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 .site-navbar a {
   color:#fff!important;
 }
 
+.dropdown-menu {
+  background-color:#fff!important;
+  color:#000!important;
+}
+
 .site-logo {
   margin-top:10px;
 }
+
 .site-logo img {
   border-radius: 10px 10px 0 0;
 }
