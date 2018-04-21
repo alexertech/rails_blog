@@ -1,0 +1,178 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require font-awesome
+ */
+
+
+/* --- Bootstrap tweaks --- */ 
+.container-fullw {
+  padding:0px!important;
+  margin:0px!important;
+}
+
+.site-main {
+  display:block;
+  max-width:700px;
+  margin:auto;
+}
+
+/* --- General tags overrides --- */
+body {
+  color             : #000!important ;
+  background-color  : #2f5278!important ;
+  margin:20px!important;
+}
+
+img {
+  max-width: 100%!important;
+}
+
+input, textarea, select {
+  border             : none;
+  border-left        : 1px solid #0b467f;
+  border-bottom      : 1px solid #0b467f;
+  padding            : 5px;
+}
+
+input {
+}
+
+textarea {
+}
+
+p {
+}
+
+ul {
+  padding-left:0px!important;
+}
+
+a:hover{
+  background-color:transparent!important;
+}
+
+/* --- Rails tags --- */
+
+.user-navbar{
+  color:#fff;
+}
+
+.user-navbar a {
+  color:#fff!important;
+}
+
+
+p#notice{
+  text-align:center;
+}
+
+
+/* --- Main Layout --- */
+
+.site-navbar {
+  color:#fff!important;
+  font-size:small;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.site-navbar a {
+  color:#fff!important;
+}
+
+.dropdown-menu {
+  background-color:#fff!important;
+  color:#000!important;
+}
+
+.site-logo {
+  margin-top:10px;
+}
+
+.site-logo img {
+  border-radius: 10px 10px 0 0;
+}
+
+.site-body {
+  border-radius: 0 0 10px 10px;
+  background-color:#f5f5f5;
+}
+
+.site-footer {
+  text-align:center;
+  color:#fff;
+  margin: 10px 0 10px 0;
+}
+
+.site-footer a {
+  color:#fff!important;
+}
+
+/* --- Pages --- */
+.avatar {
+  width:130px;
+  float:left;
+  margin-right:20px;
+}
+
+.login-page .row {
+  padding: 20px!important;
+}
+.about-page .row {
+  padding: 0 20px 0 20px;
+}
+
+
+/* --- Posts --- */
+
+.post_main .row{
+  padding:0 20px 0 20px;  
+}
+
+.post_date{
+  font-size:0.9em;
+  text-align:right;
+}
+
+.post_title {
+  margin-top:10px;
+  padding-bottom:10px;
+  font-size:1.8em;
+}
+
+.post_tags {
+  font-size:0.9em;
+  text-align:right;
+}
+
+.post_controls {
+}
+
+/* --- Tags --- */
+.tags_main {
+  padding: 20px 0 20px 0;    
+}
+
+.tags_title {
+
+}
+
+.tags_list {
+
+}
+
+.tags_controls {
+
+}
