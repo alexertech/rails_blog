@@ -24,71 +24,54 @@
           <!-- TODO : center navbar buttons in the page -->
 
 
-          <div class="container-fluid" role="navigation">
-              <ul class="nav nav-pills site-navbar nav-justified">
-                <li>
-                  <%= link_to(root_path) do %>
-                    <%= fa_icon "home" %> Inicio
-                  <% end %>
-                </li>
-                <li>
-                  <%= link_to(about_path) do %>
-                    <%= fa_icon "user" %> Posts
-                  <% end %>
-                </li>
-                <li>
-                  <%= link_to(posts_path) do %>
-                    <%= fa_icon "square" %> Blog
-                  <% end %>
-                </li>
+        <div class="container-fluid" role="navigation">
+
+          <ul class="nav nav-pills site-navbar nav-justified" style="text-align: center;">
+
+            <div class="col-xs-3">
+              <%= link_to(root_path) do %>
+                <%= fa_icon "home" %><br> Inicio
+              <% end %>
+            </div>
+
+            <div class="col-xs-3">
+              <%= link_to(about_path) do %>
+                <%= fa_icon "user" %><br> Ahora
+              <% end %>
+            </div>
+            
+            <div class="col-xs-3">
+              <%= link_to(posts_path) do %>
+                <%= fa_icon "square" %><br> Blog
+              <% end %>
+            </div>
+   
+            <% if current_user %>
+   
+            <div class="col-xs-3" style="padding-top:10px">
+              <%= link_to(new_post_path) do %>
+                <%= fa_icon "plus-square" %> 
+              <% end %>&nbsp;&nbsp;
+              <%= link_to("/log-out") do %>
+                <%= fa_icon "sign-out" %> 
+              <% end %>
+            </div>
 
 
-                <li role="presentation" class="dropdown">
-                  <a class="dropdown-toggle" data-toggle="dropdown" href="#" 
-                     role="button" aria-haspopup="true" aria-expanded="false">
-                    Social <span class="caret"></span>
-                  </a>
-                  <ul class="dropdown-menu">
-    
-                    <li>
-                      <%= link_to("http://twitter.com/alexertech") do %>
-                        <%= fa_icon "twitter" %> Twitter
-                      <% end %>
-                    </li>
-                    <li>
-                      <%= link_to("https://www.linkedin.com/in/alexertech/") do %>
-                        <%= fa_icon "linkedin" %> Linkedin
-                      <% end %>
-                    </li>
+            <% else %>
 
-                  </ul>
-                </li>
-                
-                <% if current_user %>
+           
+            <div class="col-xs-3">
+              <%= link_to("/log-in") do %>
+                <%= fa_icon "sign-in" %><br> Login
+              <% end %>
+            </div>               
+            
+            <% end %>
 
-                <li>
-                  <%= link_to(new_post_path) do %>
-                    <%= fa_icon "plus-square" %> New Post
-                  <% end %>
-                </li>
-                <li>
-                  <%= link_to("/log-out") do %>
-                    <%= fa_icon "sign-out" %> Logout
-                  <% end %>
-                </li>
+          </ul>
 
-                <% else %>
-               
-                <li>
-                  <%= link_to("/log-in") do %>
-                    <%= fa_icon "sign-in" %> Login
-                  <% end %>
-                </li>               
-                
-                <% end %>
-                </ul>
-                
-              </div>
+        </div>
 
 
 

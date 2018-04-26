@@ -6,118 +6,142 @@
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="main.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
   </head>
 <body>
 
-  <!-- main container -->
-  <div class="container-fluid site-main">
+    <!-- main container -->
+    <div class="container-fluid site-main">
 
-    <!-- main grid, 3 colums, 3x6x3 -->
-    <div class="row">
+      <!-- main grid, 3 colums, 3x6x3 -->
+      <div class="row">
 
-      <!-- user navbar -->
+        <!-- user navbar -->
 
-      <!-- TODO : center navbar buttons in the page -->
+        <!-- TODO : center navbar buttons in the page -->
 
 
-      <div class="container-fluid" role="navigation">
+        <div class="container-fluid" role="navigation">
 
-        <ul class="nav nav-pills site-navbar nav-justified" style="text-align: center">
-          <li>
-            <i class="fas fa-home"></i> Inicio
-          </li>
-          <li>
-            <i class="fas fa-user"></i> Posts
-          </li>
-          <li>
-            <i class="fas fa-square"></i> Blog
-          </li>
-          <li>
-            <i class="fas fa-plus-square"></i> New Post
-          </li>
-          <li>
-            <i class="fas fa-sign-out-alt"></i> Logout
-          </li>
+          <ul class="nav nav-pills site-navbar nav-justified" style="text-align: center">
+            <li>
+              <%= link_to(root_path) do %>
+                <%= fa_icon "home" %> Inicio
+              <% end %>
+            </li>
+            <li>
+              <%= link_to(about_path) do %>
+                <%= fa_icon "user" %> Ahora
+              <% end %>
+            </li>
+            <li>
+              <%= link_to(posts_path) do %>
+                <%= fa_icon "square" %> Blog
+              <% end %>
+            </li>
+   
+            <% if current_user %>
+   
+            <li>
+              <%= link_to(new_post_path) do %>
+                <%= fa_icon "plus-square" %> Nuevo
+              <% end %>           
+            </li>
+            <li>
+              <%= link_to(/log-out) do %>
+                <%= fa_icon "sign-out" %> Salir
+              <% end %>
+            </li>
 
-        </ul>
 
-      </div>
-      <!-- main logo -->
-      <div class="container-fluid ">
-        <div class="row">
-          <div class="col-xd-12 site-logo rounded">
-            <img src="header.png">
-          </div>
+            <% else %>
+           
+            <li>
+              <%= link_to("/log-in") do %>
+                <%= fa_icon "sign-in" %> Acceder
+              <% end %>
+            </li>               
+            
+            <% end %>
+
+          </ul>
+
         </div>
-      </div>          
+        <!-- main logo -->
+        <div class="container-fluid ">
+          <div class="row">
+            <div class="col-xd-12 site-logo rounded">
+              <img src="header.png">
+            </div>
+          </div>
+        </div>          
 
-      <!-- main content -->
-      <div class="container-fluid site-body">
-        <div class="row">
-          <div class="col-xs-12">
+        <!-- main content -->
+        <div class="container-fluid site-body">
+          <div class="row">
+            <div class="col-xs-12">
 
-            <br>
+              <br>
 
-            <div class="container-fluid about-page">
+              <div class="container-fluid about-page">
 
-              <div class="row">
+                <div class="row">
 
-                <img src="myself.jpg" class="img-circle avatar">
+                  <img src="myself.jpg" class="img-circle avatar">
 
-                <h4>Code = art();</h4>
-                Hola! Soy Alex B. investigador de seguridad informática y desarrollador en varios lenguajes
-                de programación tanto para escritorio como Web. Me apasiona aprender y actualizarme constantemente
-                por lo que compartiré acá un poco de los resultados de cada proyecto.
-                
-                <br><br>
-                
-                Puedes contactarme directamente por mi cuenta de twitter <a href="http://twitter.com/alexertech">@alexertech</a>, o mi <a href="https://www.linkedin.com/in/alexertech/">perfil en LinkedIn</a>.
-                
-                
-                
+                  <h4>Code = art();</h4>
+                  Hola! Soy Alex B. investigador de seguridad informática y desarrollador en varios lenguajes
+                  de programación tanto para escritorio como Web. Me apasiona aprender y actualizarme constantemente
+                  por lo que compartiré acá un poco de los resultados de cada proyecto.
+                  
+                  <br><br>
+                  
+                  Puedes contactarme directamente por mi cuenta de twitter <a href="http://twitter.com/alexertech">@alexertech</a>, o mi <a href="https://www.linkedin.com/in/alexertech/">perfil en LinkedIn</a>.
+                  
+                  
+                  
+                </div>
+
               </div>
 
+              <br>
+
             </div>
-
-            <br>
-
           </div>
         </div>
+
+        <!-- footer -->
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-12 site-footer">
+
+            <p> 
+              2018 &copy; Alex Barrios - Todos los derechos reservados
+              <span style="font-size:x-small">
+                <br> Night Comming Image &copy; 
+
+                <a href="https://www.deviantart.com/art/Nightcoming-collab-work-448814520">Tr1umph, ifreex and KageRott</a>
+              </span>
+            </p>
+
+            </div>
+          </div>
+        </div>   
+
       </div>
-
-      <!-- footer -->
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xs-12 site-footer">
-
-          <p> 
-            2018 &copy; Alex Barrios - Todos los derechos reservados
-            <span style="font-size:x-small">
-              <br> Night Comming Image &copy; 
-
-              <a href="https://www.deviantart.com/art/Nightcoming-collab-work-448814520">Tr1umph, ifreex and KageRott</a>
-            </span>
-          </p>
-
-          </div>
-        </div>
-      </div>   
-
     </div>
-  </div>
 
 
-  <!-- JavaScript
-  ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/bootstrap.min.js"></script>
+    <!-- JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
 
   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
   <script>
