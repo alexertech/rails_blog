@@ -43900,3 +43900,115 @@ Processing by AboutController#show as HTML
 Completed 200 OK in 65ms (Views: 62.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2018-05-01 01:30:00 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (228.7ms)
+Completed 200 OK in 319ms (Views: 307.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/now" for ::1 at 2018-05-01 01:30:32 -0300
+Processing by AboutController#show as HTML
+  Rendering about/show.html.erb within layouts/application
+  Rendered about/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 55ms (Views: 51.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/log-in" for ::1 at 2018-05-01 01:30:37 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 54ms (Views: 51.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2018-05-01 01:30:38 -0300
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:PostsController> at /Users/ab/Code/ror/rails_blog/app/controllers/posts_controller.rb:3)
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 16], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [2 times] (0.5ms)
+  Rendered posts/index.html.erb within layouts/application (39.1ms)
+Completed 200 OK in 126ms (Views: 95.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for ::1 at 2018-05-01 01:30:44 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 60ms (Views: 57.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/now" for ::1 at 2018-05-01 01:31:02 -0300
+Processing by AboutController#show as HTML
+  Rendering about/show.html.erb within layouts/application
+  Rendered about/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 79ms (Views: 75.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2018-05-01 01:33:01 -0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 16], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [2 times] (0.7ms)
+  Rendered posts/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 74ms (Views: 69.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/tags/8" for ::1 at 2018-05-01 01:33:06 -0300
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE (LOWER(name) = LOWER('infosec'))[0m
+  Rendering tags/show.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" JOIN taggings posts_taggings_2bc36d3  ON posts_taggings_2bc36d3.taggable_id = posts.id AND posts_taggings_2bc36d3.taggable_type = 'Post' AND posts_taggings_2bc36d3.tag_id = 8[0m
+  Rendered collection of posts/_post.html.erb [1 times] (0.6ms)
+  Rendered tags/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 120ms (Views: 48.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for ::1 at 2018-05-01 01:33:09 -0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 16], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [2 times] (0.8ms)
+  Rendered posts/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 75ms (Views: 71.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/16" for ::1 at 2018-05-01 01:33:10 -0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActsAsTaggableOn::Tag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 16], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [2 times] (0.6ms)
+  Rendered posts/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 54ms (Views: 49.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tags/8" for ::1 at 2018-05-01 01:33:14 -0300
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mActsAsTaggableOn::Tag Load (2.3ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE (LOWER(name) = LOWER('infosec'))[0m
+  Rendering tags/show.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" JOIN taggings posts_taggings_2bc36d3  ON posts_taggings_2bc36d3.taggable_id = posts.id AND posts_taggings_2bc36d3.taggable_type = 'Post' AND posts_taggings_2bc36d3.tag_id = 8[0m
+  Rendered collection of posts/_post.html.erb [1 times] (1.3ms)
+  Rendered tags/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 70ms (Views: 62.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/posts" for ::1 at 2018-05-01 01:33:17 -0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 16], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [2 times] (0.7ms)
+  Rendered posts/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 87ms (Views: 83.8ms | ActiveRecord: 0.5ms)
+
+
