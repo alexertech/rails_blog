@@ -45191,3 +45191,135 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 52ms (Views: 49.5ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/posts" for ::1 at 2018-05-14 01:03:23 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:PostsController> at /Users/ab/Code/ror/rails_blog/app/controllers/posts_controller.rb:3)
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 16], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [3 times] (0.5ms)
+  Rendered posts/index.html.erb within layouts/application (47.1ms)
+Completed 200 OK in 391ms (Views: 354.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2018-05-14 01:03:26 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 56ms (Views: 52.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2018-05-14 01:04:09 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 57ms (Views: 54.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2018-05-14 01:04:31 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 48ms (Views: 44.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2018-05-14 01:05:05 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 54ms (Views: 50.5ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mPost Load (2.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 3]]
+Started GET "/posts" for ::1 at 2018-05-14 01:07:37 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:PostsController> at /Users/ab/Code/ror/rails_blog/app/controllers/posts_controller.rb:3)
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 16], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [3 times] (0.6ms)
+  Rendered posts/index.html.erb within layouts/application (46.8ms)
+Completed 200 OK in 391ms (Views: 358.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-05-14 01:07:40 -0400
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (21.1ms)
+  Rendered posts/new.html.erb within layouts/application (23.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 64.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/posts" for ::1 at 2018-05-14 01:07:52 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Dt6RcEcj20CHNbPoptC5oIXnKFLAsAMQqU2lQqUuZ+XJcKlamkoQ1A5MoTek4stoyrXrHdpSnYdEsL+ZZEmDLw==", "post"=>{"title"=>"How to switch career to Information Security", "body"=>"Taking as opportunity the recent re-design of my site, I decided to answer (or at least try) one of the most repeated question I get: How can I switch my career to IT security / \"hacking\"?\r\n\r\n**Learn all the things**\r\n\r\nA good friend of mine game me that answer for question about a particular research on hardware security. I was so frustrated that didn't understand a thing about and was looking for a way out with the thought: \"Would be worthy to learn this?\".\r\n\r\nFrustration is one of the things that we must deal on a daily basis on this path, because there is so much learning involved on everything you want to test or achieve, but its so rewarding when you, at the end of all the pain, get a shell, or just get a program to act contrary of its original purpose.\r\n\r\n**Lets workout the bases first**\r\n\r\nBefore jumping into Virtual machines and CTF's, make sure that you have a strong programming language, specially with the Python language. Its more easy than you may think, since python is one of the most \"easy to learn\" languages you can see around. You can visit my old [Python Crash Course](https://github.com/alexertech/python_crash_course) where you can actually learn the language by doing.\r\n\r\nOnce you are done, the next in the list is to catch up with some networking  knowledge. Just grab a simple networking basics tutorial, where you can learn  from what is an IP address, to what are sockets and ports, and how can you play  with them. Will try to post soon a tutorial for this on a \"learning by doing\" way.\r\n\r\n**Don't forget about Linux**\r\n\r\nYes, you will need to polish your Linux powers, and specially the command line. But of course, there are so many tutorials around that you will up and running  in no time.\r\n\r\nMy suggestion, the [Kali Free course](https://kali.training/lessons/introduction/) where you can also get a free copy of the *Kali Revealed* Book.\r\n\r\nTake your time with the course, since it contains a LOT of information and complete all the exercises (you can see the solutions there). This will grant you the required knowledge for one of the most used tools in the IT Security Industry.\r\n\r\n**I'm ready**\r\n\r\nIf you are already done (but seriously, no skipping allowed), lets continue the learning with your first vulnerable application for research and fun:\r\n[DVWA - Damn Vulnerable Web Application](http://www.dvwa.co.uk/).\r\n\r\nAfter you complete the challenges of this site, the next \"_Level Up_\" will be  complete your first CTF's (capture the flag) at:\r\n[Vulnerable By Design ~ VulnHub](https://www.vulnhub.com/)\r\n\r\n**Let's talk about!**\r\n\r\nDo you like my selection for starters? Do you have a better approach / idea? Hit me on [twitter](http://twitter.com/alexertech), will love to get more points of view in this popular question.", "tag_list"=>"infosec, development, personal"}, "commit"=>"Save & Publish"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "How to switch career to Information Security"], ["body", "Taking as opportunity the recent re-design of my site, I decided to answer (or at least try) one of the most repeated question I get: How can I switch my career to IT security / \"hacking\"?\r\n\r\n**Learn all the things**\r\n\r\nA good friend of mine game me that answer for question about a particular research on hardware security. I was so frustrated that didn't understand a thing about and was looking for a way out with the thought: \"Would be worthy to learn this?\".\r\n\r\nFrustration is one of the things that we must deal on a daily basis on this path, because there is so much learning involved on everything you want to test or achieve, but its so rewarding when you, at the end of all the pain, get a shell, or just get a program to act contrary of its original purpose.\r\n\r\n**Lets workout the bases first**\r\n\r\nBefore jumping into Virtual machines and CTF's, make sure that you have a strong programming language, specially with the Python language. Its more easy than you may think, since python is one of the most \"easy to learn\" languages you can see around. You can visit my old [Python Crash Course](https://github.com/alexertech/python_crash_course) where you can actually learn the language by doing.\r\n\r\nOnce you are done, the next in the list is to catch up with some networking  knowledge. Just grab a simple networking basics tutorial, where you can learn  from what is an IP address, to what are sockets and ports, and how can you play  with them. Will try to post soon a tutorial for this on a \"learning by doing\" way.\r\n\r\n**Don't forget about Linux**\r\n\r\nYes, you will need to polish your Linux powers, and specially the command line. But of course, there are so many tutorials around that you will up and running  in no time.\r\n\r\nMy suggestion, the [Kali Free course](https://kali.training/lessons/introduction/) where you can also get a free copy of the *Kali Revealed* Book.\r\n\r\nTake your time with the course, since it contains a LOT of information and complete all the exercises (you can see the solutions there). This will grant you the required knowledge for one of the most used tools in the IT Security Industry.\r\n\r\n**I'm ready**\r\n\r\nIf you are already done (but seriously, no skipping allowed), lets continue the learning with your first vulnerable application for research and fun:\r\n[DVWA - Damn Vulnerable Web Application](http://www.dvwa.co.uk/).\r\n\r\nAfter you complete the challenges of this site, the next \"_Level Up_\" will be  complete your first CTF's (capture the flag) at:\r\n[Vulnerable By Design ~ VulnHub](https://www.vulnhub.com/)\r\n\r\n**Let's talk about!**\r\n\r\nDo you like my selection for starters? Do you have a better approach / idea? Hit me on [twitter](http://twitter.com/alexertech), will love to get more points of view in this popular question."], ["created_at", 2018-05-14 05:07:52 UTC], ["updated_at", 2018-05-14 05:07:52 UTC]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE (LOWER(name) = LOWER('infosec') OR LOWER(name) = LOWER('development') OR LOWER(name) = LOWER('personal'))[0m
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 17], ["taggable_type", "Post"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tagging Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "taggings" WHERE "taggings"."tag_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."taggable_id" = ? AND "taggings"."context" = ? AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL LIMIT ?[0m  [["tag_id", 8], ["taggable_type", "Post"], ["taggable_id", 17], ["context", "tags"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "taggings" ("tag_id", "taggable_type", "taggable_id", "context", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["tag_id", 8], ["taggable_type", "Post"], ["taggable_id", 17], ["context", "tags"], ["created_at", 2018-05-14 05:07:52 UTC]]
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) + 1 WHERE "tags"."id" = ?[0m  [["id", 8]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tagging Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "taggings" WHERE "taggings"."tag_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."taggable_id" = ? AND "taggings"."context" = ? AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL LIMIT ?[0m  [["tag_id", 13], ["taggable_type", "Post"], ["taggable_id", 17], ["context", "tags"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "taggings" ("tag_id", "taggable_type", "taggable_id", "context", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["tag_id", 13], ["taggable_type", "Post"], ["taggable_id", 17], ["context", "tags"], ["created_at", 2018-05-14 05:07:52 UTC]]
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) + 1 WHERE "tags"."id" = ?[0m  [["id", 13]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tagging Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "taggings" WHERE "taggings"."tag_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."taggable_id" = ? AND "taggings"."context" = ? AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL LIMIT ?[0m  [["tag_id", 1], ["taggable_type", "Post"], ["taggable_id", 17], ["context", "tags"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "taggings" ("tag_id", "taggable_type", "taggable_id", "context", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["tag_id", 1], ["taggable_type", "Post"], ["taggable_id", 17], ["context", "tags"], ["created_at", 2018-05-14 05:07:52 UTC]]
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) + 1 WHERE "tags"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/17
+Completed 302 Found in 96ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/posts/17" for ::1 at 2018-05-14 01:07:52 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?[0m  [["taggable_id", 17], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of acts_as_taggable_on/tags/_tag.html.erb [3 times] (0.5ms)
+  Rendered posts/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 64ms (Views: 60.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2018-05-14 01:07:55 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (3.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 65ms (Views: 62.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2018-05-14 01:10:34 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 65ms (Views: 62.0ms | ActiveRecord: 0.3ms)
+
+
