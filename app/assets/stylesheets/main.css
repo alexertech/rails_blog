@@ -109,11 +109,12 @@ p#notice{
 }
 
 .site-logo img {
-  border-radius : 10px 10px 0 0;
+  border-radius : 10px;
 }
 
 .site-body {
-  border-radius : 0 0 10px 10px;
+  margin-top:-10px;
+  border-radius : 10px;
   background-color : #322F2D;
 }
 
@@ -127,7 +128,23 @@ p#notice{
   color : #fff!important;
 }
 
+.left_block {
+  width: 49%;
+  float: left;
+}
+
+.right_block {
+  width: 49%;
+  float:right;
+}
+
 /* --- Pages --- */
+.round_shadow {
+  background-color:#201E1D;
+  border-radius: 10px;
+  padding:10px!important;
+}
+
 .avatar {
   width : 130px;
   float : left;
@@ -138,7 +155,7 @@ p#notice{
   padding : 20px!important;
 }
 .about-page .row {
-  padding : 0 20px 0 20px;
+  padding : 10px;
 }
 
 

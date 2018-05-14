@@ -3,35 +3,52 @@
 <div class="container-fluid about-page">
 
     <div class="row">
-        <%= image_tag "myself.jpg", alt: "Alex B.", class: "img-circle avatar" %>
+  
+        <div class="round_shadow">
+          <%= image_tag "myself.jpg", alt: "Alex B.", class: "img-circle avatar" %>
        
-        <div> 
           <h4>Code = art();</h4>
        
   Alex B., IT Security Research and Software Developer with knowledge in several
   programming languages for web and desktop. My passion is the continue learning
   of my career with constant opportunities of research and development.       
 
+
+          <div style="clear:both"></div>
         </div>
 
-        <div style="clear:both;">
-          <br>
-          <strong>Last post</strong>
-          <br>
-          <%=Post.last.title%>
-          <a href="/posts/<%=Post.last.id%>">[...]</a>
+
+        <div class="left_block">
+
+          <div>
+            <br>
+            <strong>Last post</strong>
+            <br>
+            <%=Post.last.title%>
+            <a href="/posts/<%=Post.last.id%>">[...]</a>
+          </div>
+
+          <div>
+            <br>
+            <strong>Social</strong>
+            <br>
+
+            For my professional profile please visit my
+            <a href="https://www.linkedin.com/in/alexertech/">LinkedIn</a>, 
+            and for general contact lets connect via Twitter at
+            <a href="http://twitter.com/alexertech">@alexertech</a>
+          </div>
+
         </div>
 
-        <div>
+        <div class="right_block">
           <br>
-          <strong>Social</strong>
+          <strong>Food for thought</strong>
           <br>
-
-          For my professional profile please visit my
-          <a href="https://www.linkedin.com/in/alexertech/">LinkedIn</a>, 
-          and for general contact lets connect via Twitter at
-          <a href="http://twitter.com/alexertech">@alexertech</a>
+           
         </div>
+
+        <div style="clear:both"></div>
 
     </div>
 
