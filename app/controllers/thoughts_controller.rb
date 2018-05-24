@@ -1,6 +1,6 @@
 class ThoughtsController < ApplicationController
 
-  before_filter :authorize, only: [:show, :edit, :update, :destroy]
+  before_filter :authorize
 
   before_action :set_thought, only: [:show, :edit, :update, :destroy]
 
