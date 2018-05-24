@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/alexertech
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://www.alexertech.com
+  * I am alexertech (https://keybase.io/alexertech) on keybase.
+  * I have a public key ASCVM-RHE3bt6zHyYHd1RNv8kpuLzR4fUdePlcwRxSB4Fgo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01209533e4471376edeb31f260777544dbfc929b8bcd1e1f51d78f95cc11c52078160a",
+      "host": "keybase.io",
+      "kid": "01209533e4471376edeb31f260777544dbfc929b8bcd1e1f51d78f95cc11c52078160a",
+      "uid": "a5951907fe81d1e5ed34ef125943c619",
+      "username": "alexertech"
+    },
+    "merkle_root": {
+      "ctime": 1520558700,
+      "hash": "6cbf2c473671285b27341aa1c587e2ac7edb1ba9666e800e82f5f5ff52393bf0a6ee93851c4b461ef2a92eafdb6531b3f48771f5afee46a025fe35da4dc6b4a3",
+      "hash_meta": "8810de85e9fa875710fdf3441a9694220192d0d39d09b9f64c0d3c642215e531",
+      "seqno": 2207024
+    },
+    "service": {
+      "hostname": "www.alexertech.com",
+      "protocol": "http:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.45"
+  },
+  "ctime": 1520558715,
+  "expire_in": 504576000,
+  "prev": "0fbe798d76bea7d7b8b9c840bd386fd29b783e808a853dffe1464599fc5aef2a",
+  "seqno": 35,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEglTPkRxN27esx8mB3dUTb/JKbi80eH1HXj5XMEcUgeBYKp3BheWxvYWTFA0x7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwOTUzM2U0NDcxMzc2ZWRlYjMxZjI2MDc3NzU0NGRiZmM5MjliOGJjZDFlMWY1MWQ3OGY5NWNjMTFjNTIwNzgxNjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwOTUzM2U0NDcxMzc2ZWRlYjMxZjI2MDc3NzU0NGRiZmM5MjliOGJjZDFlMWY1MWQ3OGY5NWNjMTFjNTIwNzgxNjBhIiwidWlkIjoiYTU5NTE5MDdmZTgxZDFlNWVkMzRlZjEyNTk0M2M2MTkiLCJ1c2VybmFtZSI6ImFsZXhlcnRlY2gifSwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE1MjA1NTg3MDAsImhhc2giOiI2Y2JmMmM0NzM2NzEyODViMjczNDFhYTFjNTg3ZTJhYzdlZGIxYmE5NjY2ZTgwMGU4MmY1ZjVmZjUyMzkzYmYwYTZlZTkzODUxYzRiNDYxZWYyYTkyZWFmZGI2NTMxYjNmNDg3NzFmNWFmZWU0NmEwMjVmZTM1ZGE0ZGM2YjRhMyIsImhhc2hfbWV0YSI6Ijg4MTBkZTg1ZTlmYTg3NTcxMGZkZjM0NDFhOTY5NDIyMDE5MmQwZDM5ZDA5YjlmNjRjMGQzYzY0MjIxNWU1MzEiLCJzZXFubyI6MjIwNzAyNH0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJ3d3cuYWxleGVydGVjaC5jb20iLCJwcm90b2NvbCI6Imh0dHA6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjQ1In0sImN0aW1lIjoxNTIwNTU4NzE1LCJleHBpcmVfaW4iOjUwNDU3NjAwMCwicHJldiI6IjBmYmU3OThkNzZiZWE3ZDdiOGI5Yzg0MGJkMzg2ZmQyOWI3ODNlODA4YTg1M2RmZmUxNDY0NTk5ZmM1YWVmMmEiLCJzZXFubyI6MzUsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RAiWSTFHazy9og8txTQ3w1mfZI6irA593V4XeK+wJShs3fj44bvSbv+u3QdsJeW7I/4DvS45Iq0F7KltoHfyQjCqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIJn9okhzSxh2wKEaSydP7o/f5Ir2Kaf1tIZKJl0QTHUgo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/alexertech
+
+==================================================================
