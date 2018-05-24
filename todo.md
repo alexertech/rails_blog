@@ -11,3 +11,4 @@
  * [ ] Blog: We still need passwords... Make them good!
  * [ ] Homepage feels small, improve distribution, icons?
  * [ ] Analytics
+ * URGENT: > thoughts crud broken after login in the site
