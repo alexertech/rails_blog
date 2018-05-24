@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :thoughts
   get 'home/index' => "home#index", as: :home
 
   get 'now' => "about#show", as: :about
@@ -9,9 +10,7 @@ Rails.application.routes.draw do
 
   # resources
   resources :users
-  resources :posts do
-    resources :comments
-  end
+  resources :posts
   resources :tags, only: [:index, :show]
 
   # Session maagement

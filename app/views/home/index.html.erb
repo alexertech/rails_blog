@@ -46,10 +46,12 @@
           <strong>Food for thought</strong>
           <br>
 
-          "But I'll tell you what hermits realize. If you go off into a far,
-           far forest and get very quiet, you'll come to understand that you're 
-           connected with everything." Alan Watts
-           
+          <% 
+          t = Thought.order("RANDOM()").last 
+          %>
+          "<%=t.quote%>"
+          <%=t.author%>
+            
         </div>
 
         <div style="clear:both"></div>
