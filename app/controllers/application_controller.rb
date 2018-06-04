@@ -9,4 +9,11 @@ class ApplicationController < ActionController::Base
  def authorize
     redirect_to '/log-in' unless current_user
  end
+
+  def pageview
+    Analytic.create :referrer   => request.referrer,
+                    :ip_address => request.remote_ip,
+                    :user_agent => request.env["HTTP_USER_AGENT"]
+  end
+
 end

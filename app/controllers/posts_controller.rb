@@ -1,7 +1,9 @@
 class PostsController < ApplicationController
   # http_basic_authenticate_with :name => "alex", :password => "hola", :except => [:index, :show]
-  before_filter :authorize, only: [:edit, :update, :destroy]
 
+  
+  after_filter  :pageview, only: [:index,:show]
+  before_filter :authorize, only: [:edit, :update, :destroy]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   # GET /posts
