@@ -201,3 +201,19 @@ p#notice{
 
 .tags_controls {
 }
+
+/* --- Thoughts --- */
+
+.thou_main .row{
+  padding : 0 20px 0 20px;  
+  text-align:left;
+}
+.thou_main .list {
+  border-bottom:1px solid black;
+
+  padding-bottom:10px;
+  margin-top:10px;
+}
+
+
+
