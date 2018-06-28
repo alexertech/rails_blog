@@ -12,32 +12,38 @@
   <% end %>
 
 
+  <div class="container-fluid form form-posts">
 
-  <div class="row">
-    <div class="col-md-12">
-      <%= f.label :title %><br>
-      <%= f.text_field :title, size:50 %>
+     <div class="row">
+        <div class="col-md-4 txtLabel"><%= f.label :title %></div>
+        <div class="col-md-8"><%= f.text_field :title, size:50 %></div>
+     </div>
+     <div class="row">
+        <div class="col-md-4 txtLabel"><%= f.label :body %></div>
+        <div class="col-md-8">
+          <%= f.text_area :body, rows: "30" %>
+          <br>
+          <em>Markdown Compatible</em>
+        </div>
+      </div>
+
+     <div class="row">
+        <div class="col-md-4 txtLabel"><%= f.label :tags %></div>
+        <div class="col-md-8">
+          <%= f.text_field :tag_list, value: f.object.tag_list.to_s, size: 50 %>
+        </div>
+     </div>
+
+     <div class="row actions">
+        <div class="col-md-4"></div>
+        <div class="col-md-8">
+          <%= f.submit 'Save & Publish'%>
+          <%= link_to 'Back', posts_path %>
+
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="row">
-    <div class="col-md-12">
-      <%= f.label :body %><br>
-      <%= f.text_area :body, cols: 59, rows: 30%>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-12">
-      <%= f.label :tags %><br>
-      <%= f.text_field :tag_list, value: f.object.tag_list.to_s, size: 50 %>
-    </div>
-  </div>
-
-
-	<div class="row" style="text-align:center">
-    <hr>
-    <%= f.submit 'Save & Publish'%>
 	</div>
 
 <% end %>

@@ -216,4 +216,30 @@ p#notice{
 }
 
 
+/* --- Forms --- */
+
+.form .txtLabel {
+  text-align : right;
+  vertical-align : top;
+}
+.form .row {
+  padding:10px;
+}
+.form input[type=text], .form textarea {
+  border-radius: 10px;
+  width : 200px;
+}
+.form-posts input[type=text], .form-posts textarea {
+  width : 300px!important;
+}
+
+.form .actions {
+  padding:10px;
+}
+
+
+
+
+
+
 
