@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
 
+  # Dashboard
+  get 'dashboard/index', as: :dash
+  get 'dashboard/clean', as: :dash_clean, to: 'dashboard#clean'
+
+  #
+  get 'analytic/index'
+
   resources :thoughts
   get 'home/index' => "home#index", as: :home
 

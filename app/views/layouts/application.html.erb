@@ -22,7 +22,10 @@
           <!-- user navbar -->
           
           <!-- TODO : center navbar buttons in the page -->
-
+        
+        <% unless notice.nil? %>
+        <div class="alert alert-info"><%= notice %></div>
+        <% end %>
 
         <div class="container-fluid" role="navigation">
 
@@ -48,15 +51,9 @@
    
             <% if current_user %>
    
-            <div class="col-xs-3" style="padding-top:10px">
-            <%= link_to(new_post_path) do %>
-                <%= fa_icon "plus-square" %> 
-              <% end %>&nbsp;&nbsp;
-             <%= link_to(thoughts_path) do %>
-                <%= fa_icon "plus-square" %> 
-              <% end %>&nbsp;&nbsp;
-              <%= link_to("/log-out") do %>
-                <%= fa_icon "sign-out" %> 
+            <div class="col-xs-3">
+              <%= link_to(dash_path) do %>
+                <%= fa_icon "plus-square" %><br> Dashboard
               <% end %>
             </div>
 
