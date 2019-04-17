@@ -17,6 +17,10 @@
 
 
 /* --- Bootstrap tweaks --- */ 
+ div,ul,p {
+  font-size: 16px;
+  line-height: 1.5;
+}
 
 
 .container-fullw {
@@ -36,7 +40,7 @@ body {
   color : #fff!important ;
   background-color : #0471A6!important ;
   margin : 20px!important;
-  
+  font-size:25px!important; 
 }
 
 img {
@@ -141,6 +145,7 @@ p#notice{
 
 /* --- Pages --- */
 .round_shadow {
+  font-size:14px;
   background-color:#201E1D;
   border-radius: 10px;
   padding:10px!important;
@@ -156,7 +161,7 @@ p#notice{
   padding : 20px!important;
 }
 .about-page .row {
-  padding : 10px;
+  padding : 10px 10px 0 10px;
 }
 
 
@@ -188,6 +193,7 @@ p#notice{
 
 .post_controls {
 }
+
 
 /* --- Tags --- */
 .tags_main {
@@ -237,10 +243,4 @@ p#notice{
 .form .actions {
   padding:10px;
 }
-
-
-
-
-
-
 

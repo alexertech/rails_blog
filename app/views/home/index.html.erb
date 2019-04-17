@@ -3,15 +3,12 @@
 <div class="container-fluid about-page">
 
     <div class="row">
-  
         <div class="round_shadow">
           <%= image_tag "myself.jpg", alt: "Alex B.", class: "img-circle avatar" %>
-       
           <h4>Code = art();</h4>
-          The passion to code can open several fields, from IT Security Research to Game Development 
-          and Hardware Hacking. My focus is continue learning everything I can and always look for 
-          opportunities of research and development.       
-
+          Programar siempre ha sido una de mis pasiones, y me ha ayudado a indagar en diversos campos
+          como el desarrollo de juegos, seguridad informática y hacking en general. Mi enfoque es
+          aprender y mejorar todo lo que pueda.
           <div style="clear:both"></div>
         </div>
 
@@ -31,8 +28,8 @@
             <%= fa_icon "twitter" %>
             <a href="http://twitter.com/alexertech">Twitter</a><br>
             <%= fa_icon "twitch" %>
-            <a href="http://twitch.com/alexertech">Twitch Channel</a><br>
-            
+            <a href="http://youtube.com/alexertech27">YouTube</a><br>
+
           </div>
 
         </div>
@@ -42,7 +39,7 @@
 
           <div>
             <br>
-            <strong>Last post</strong>
+            <strong>Ultimo post</strong>
             <br>
             <%=Post.last.title%>
             <a href="/posts/<%=Post.last.id%>">[...]</a>
@@ -57,7 +54,7 @@
           %>
           "<%=t.quote%>"
           <%=t.author%>
-            
+
         </div>
 
         <div style="clear:both"></div>

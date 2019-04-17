@@ -20,9 +20,7 @@
       <div class="row">
 
           <!-- user navbar -->
-          
           <!-- TODO : center navbar buttons in the page -->
-        
         <% unless notice.nil? %>
         <div class="alert alert-info"><%= notice %></div>
         <% end %>
@@ -33,13 +31,13 @@
 
             <div class="col-xs-3">
               <%= link_to(root_path) do %>
-                <%= fa_icon "home" %><br> Home
+                <%= fa_icon "home" %><br> Inicio
               <% end %>
             </div>
 
             <div class="col-xs-3">
               <%= link_to(about_path) do %>
-                <%= fa_icon "user" %><br> Now
+                <%= fa_icon "user" %><br> Ahora
               <% end %>
             </div>
             
@@ -53,7 +51,7 @@
    
             <div class="col-xs-3">
               <%= link_to(dash_path) do %>
-                <%= fa_icon "plus-square" %><br> Dashboard
+                <%= fa_icon "plus-square" %><br> Admin
               <% end %>
             </div>
 
