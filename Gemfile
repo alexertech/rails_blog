@@ -60,6 +60,12 @@ gem 'redcarpet'
 gem 'coderay'
 
 # Bootstrap supported
-gem 'bootstrap-sass', '~> 3.3.5'
+# gem 'bootstrap-sass', '~> 3.3.5'
+
+# Fix according to github
+gem "bootstrap-sass", ">= 3.4.1"
+
+
+
 
 gem 'nokogiri', '>=1.5.4'
